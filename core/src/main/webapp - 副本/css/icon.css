@@ -1,0 +1,189 @@
+/*.icon-blank{
+	background:url('icons/blank.gif') no-repeat center center;
+}
+.icon-add{
+	background:url('icons/edit_add.png') no-repeat center center;
+}
+.icon-edit{
+	background:url('icons/pencil.png') no-repeat center center;
+}
+.icon-remove{
+	background:url('icons/edit_remove.png') no-repeat center center;
+}
+.icon-save{
+	background:url('icons/filesave.png') no-repeat center center;
+}
+.icon-cut{
+	background:url('icons/cut.png') no-repeat center center;
+}
+.icon-ok{
+	background:url('icons/ok.png') no-repeat center center;
+}
+.icon-no{
+	background:url('icons/no.png') no-repeat center center;
+}
+.icon-cancel{
+	background:url('icons/cancel.png') no-repeat center center;
+}
+.icon-reload{
+	background:url('icons/reload.png') no-repeat center center;
+}
+.icon-search{
+	background:url('icons/search.png') no-repeat center center;
+}
+.icon-print{
+	background:url('icons/print.png') no-repeat center center;
+}
+.icon-help{
+	background:url('icons/help.png') no-repeat center center;
+}
+.icon-undo{
+	background:url('icons/undo.png') no-repeat center center;
+}
+.icon-redo{
+	background:url('icons/redo.png') no-repeat center center;
+}
+.icon-back{
+	background:url('icons/back.png') no-repeat center center;
+}
+.icon-sum{
+	background:url('icons/sum.png') no-repeat center center;
+}
+.icon-tip{
+	background:url('icons/tip.png') no-repeat center center;
+}
+.icon-filter{
+	background:url('icons/filter.png') no-repeat center center;
+}
+.icon-export{
+	background:url('icons/export.png') no-repeat center center;
+}
+.icon-import{
+	background:url('icons/import.png') no-repeat center center;
+}
+.icon-mini-add{
+	background:url('icons/mini_add.png') no-repeat center center;
+}
+.icon-mini-edit{
+	background:url('icons/mini_edit.png') no-repeat center center;
+}
+.icon-mini-refresh{
+	background:url('icons/mini_refresh.png') no-repeat center center;
+}*/
+/*zhuyinhua*/
+/*发票icon*/
+.icon-tax-1{
+	background:url('../images/icontax1.png') no-repeat center center;
+}
+.icon-tax-2{
+	background:url('../images/icontax2.png') no-repeat center center;
+}
+.icon-tax-3{
+	background:url('../images/icontax3.png') no-repeat center center;
+}
+.icon-tax-4{
+	background:url('../images/icontax4.png') no-repeat center center;
+}
+.icon-tax-5{
+	background:url('../images/iconsb3.png') no-repeat center center;
+}
+.icon-tax-6{
+	background:url('../images/icontax6.png') no-repeat center center;
+}
+.icon-tax-7{
+	background:url('../images/icontax7.png') no-repeat center center;
+}
+.icon-tax-8{
+	background:url('../images/icontax8.png') no-repeat center center;
+}
+.icon-tax-9{
+	background:url('../images/icontax9.png') no-repeat center center;
+}
+.icon-tax-10{
+	background:url('../images/icontax10.png') no-repeat center center;
+}
+.icon-tax-11{
+	background:url('../images/icontax1.png') no-repeat center center;
+}
+.icon-tax-12{
+	background:url('../images/icontax2.png') no-repeat center center;
+}
+.icon-tax-13{
+	background:url('../images/icontax3.png') no-repeat center center;
+}
+.icon-tax-14{
+	background:url('../images/icontax4.png') no-repeat center center;
+}
+.icon-tax-15{
+	background:url('../images/icontax5.png') no-repeat center center;
+}
+.icon-tax-16{
+	background:url('../images/icontax6.png') no-repeat center center;
+}
+.icon-tax-17{
+	background:url('../images/icontax7.png') no-repeat center center;
+}
+.icon-tax-18{
+	background:url('../images/icontax8.png') no-repeat center center;
+}
+.icon-tax-19{
+	background:url('../images/icontax9.png') no-repeat center center;
+}
+/*申报*/
+.icon-sb-1{
+	background:url('../images/iconsb1.png') no-repeat center center;
+}
+.icon-sb-2{
+	background:url('../images/iconsb2.png') no-repeat center center;
+}
+.icon-sb-3{
+	background:url('../images/iconsb3.png') no-repeat center center;
+}
+.icon-sb-4{
+	background:url('../images/iconsb4.png') no-repeat center center;
+}
+.icon-sb-5{
+	background:url('../images/iconsb5.png') no-repeat center center;
+}
+.icon-sb-6{
+	background:url('../images/iconsb6.png') no-repeat center center;
+}
+.icon-sb-7{
+	background:url('../images/iconsb7.png') no-repeat center center;
+}
+.icon-sb-8{
+	background:url('../images/iconsb8.png') no-repeat center center;
+}
+.icon-sb-9{
+	background:url('../images/iconsb9.png') no-repeat center center;
+}
+.icon-sb-10{
+	background:url('../images/iconsb10.png') no-repeat center center;
+}
+.icon-sb-11{
+	background:url('../images/iconsb1.png') no-repeat center center;
+}
+.icon-sb-12{
+	background:url('../images/iconsb2.png') no-repeat center center;
+}
+.icon-sb-13{
+	background:url('../images/iconsb3.png') no-repeat center center;
+}
+.icon-sb-14{
+	background:url('../images/iconsb4.png') no-repeat center center;
+}
+.icon-sb-15{
+	background:url('../images/iconsb5.png') no-repeat center center;
+}
+.icon-sb-16{
+	background:url('../images/iconsb6.png') no-repeat center center;
+}
+.icon-sb-17{
+	background:url('../images/iconsb7.png') no-repeat center center;
+}
+.icon-sb-18{
+	background:url('../images/iconsb8.png') no-repeat center center;
+}
+.icon-sb-19{
+	background:url('../images/iconsb9.png') no-repeat center center;
+}

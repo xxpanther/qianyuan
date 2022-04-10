@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<sqlConfig>
+    
+    <sql id="getCabinetInfo">
+        <![CDATA[
+                SELECT REC_NO  CABINET_REC_ID ,WWName WW_NAME ,GGName GG_NAME,CCName CC_NAME,CONVERT(varchar(100), DepositTime, 20) DEPOSIT_TIME,CONVERT(varchar(100), MakeSampleTime, 20) MAKE_SAMPLE_TIME,SampleStatus SAMPLE_STATUS,SampleType SAMPLE_TYPE,SampleID PACK_CODE,Enabled IS_ENABLED from  CABINET_INFO WHERE DATA_STATUS = 0
+        ]]>
+    </sql>
+
+    <sql id="writeCabinetInfo">
+        <![CDATA[
+                update CABINET_INFO set DATA_STATUS = '1' where DATA_STATUS = '0'and REC_NO = ?
+        ]]>
+    </sql>
+
+    <sql id="getCabinetRec">
+        <![CDATA[
+                select Top 50 REC_NO REC_HIS_ID,SampleTYPE SAMPLE_TYPE,GGName GG_NAME, CCName CC_NAME, WWName WW_NAME,OpType OP_TYPE,CONVERT(varchar(100), OpTime, 20)  OP_TIME,SourceName SOURCE_NAME,DestinationName DEST_NAME,CONVERT(varchar(100), MakeSampleTime, 20) MAKE_SAMPLE_TIME,SampleID PACK_CODE,IsSuccessed IS_SUCCESSED,Operator OPERATOR from SAMPLEREC where DATA_STATUS = 0
+        ]]>
+    </sql>
+
+    <sql id="writeCabinetRec">
+        <![CDATA[
+                update SAMPLEREC set DATA_STATUS = '1' where DATA_STATUS = '0'and REC_NO = ?
+        ]]>
+    </sql>
+
+    <sql id="getCabinetError">
+        <![CDATA[
+              select TOP 50 rec_no,errorcode,devicecode,devicename,errordesc,CONVERT(varchar(100), createtime, 20) as createtime  from error_info where rdflag=0
+        ]]>
+    </sql>
+
+    <sql id="writeCabinetError">
+        <![CDATA[
+                update ERROR_INFO set RDFLAG = '1' where RDFLAG = '0' and rec_no = ?
+        ]]>
+    </sql>
+
+    <sql id="getCabinetWarning">
+        <![CDATA[
+			select Top 50 rec_no,warningcode,devicecode,devicename,warningdesc,CONVERT(varchar(100), createtime, 20) as createtime from warning_info WHERE rdflag=0
+        ]]>
+    </sql>
+
+    <sql id="writeCabinetWarning">
+        <![CDATA[
+                update WARNING_INFO set RDFLAG = '1' where RDFLAG = '0'and rec_no = ?
+        ]]>
+    </sql>
+
+    <sql id="getDeviceStatus">
+        <![CDATA[
+            select rec_no,deviceid,devicename,devicestatus1,devicestatus2,devicestatus3,linestatus from device_status
+        ]]>
+    </sql>
+</sqlConfig>

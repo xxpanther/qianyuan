@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<!-- saved from url=(0087)https://etax.jiangsu.chinatax.gov.cn/shenbao/sbcxAction.action?sign=queryData&sb_type=1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>申报查询</title>
+
+
+
+<link href="css/etax.css" type="text/css" rel="stylesheet">
+<link href="css/etaxtoolbar.css" type="text/css" rel="stylesheet">
+<link href="css/loadbar.css" type="text/css" rel="stylesheet">
+<link href="css/bblist.css" type="text/css" rel="stylesheet">
+<link href="css/layer(1).css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.json.min.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/layer.min(1).js"></script><link type="text/css" rel="stylesheet" href="css/layer(1).css" id="skinlayercss">
+<script type="text/javascript" src="js/layerHandler(1).js"></script>
+<script type="text/javascript" src="js/ajaxPlugin.js"></script>
+<script type="text/javascript" src="js/etaxCal.js"></script>
+<script type="text/javascript" src="js/etaxAjaxTool.js"></script>
+<script type="text/javascript" src="js/etaxCommon.js"></script>
+<script type="text/javascript" src="js/jquery.bblist.js"></script>
+<script type="text/javascript" src="js/etaxToolbar.js"></script>
+<script type="text/javascript" src="js/etaxMoneyCal.js"></script>
+<script type="text/javascript" src="js/decimal.js"></script>
+<script type="text/javascript" src="js/WdatePicker.js"></script><link href="css/WdatePicker.css" rel="stylesheet" type="text/css">
+<!-- è´¢å¡æ¥è¡¨é¡µé¢åå§åæ¶å¢å å¬å±æç¤ºä¿¡æ¯ -->
+<script type="text/javascript" src="js/cwbbPrompt.js"></script>
+ </head>
+ <body>
+     <div style="position: absolute; z-index: 19700; top: -1970px; left: -1970px;">
+         <iframe src="My97DatePicker.html" frameborder="0" border="0" scrolling="no" style="width: 186px; height: 199px;"></iframe>
+     </div><input type="hidden" name="sbzbstate" id="sbzbstate" value="null">
+ <input type="hidden" name="sjly" id="sjly" value="null">
+
+
+
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="css/sbbase.css">
+<link rel="stylesheet" type="text/css" href="css/base(2).css">
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery.messageBox.js"></script>
+<script type="text/javascript" src="js/sbcx.js"></script>
+<script type="text/javascript" src="js/base64(1).js"></script>
+<script type="text/javascript" src="js/fjsJumpComm.js"></script>	
+<script type="text/javascript" src="js/sbCancel.js"></script>		
+
+
+	 <link rel="stylesheet" type="text/css" href="css/jcDate.css" media="all" />
+	 <script src="js/jquery2.2.4.js" charset="utf-8"></script>
+	 <script type="text/javascript" src="js/jQuery-jcDate.js" charset="utf-8"></script>
+
+	<div class="sbicons">
+		<span style="color:red">友情提示：此功能提供查看打印申报表、申报作废、税款缴纳及附加税申报等相关操作！</span>
+	</div>
+
+	<br/>
+	 <div style="margin-left: 25px">
+	 <input type="button" style="align-content: center; width: 32px; display: block; position: relative; background: #1685ee; color: #fff; text-decoration: none; cursor: pointer;" onclick="changedata()" value="查询"></input>
+	 </div>
+
+	 <form method="post" id="sbcxForm" action="https://etax.jiangsu.chinatax.gov.cn/shenbao/sbcxAction.action?sign=queryData&amp;sb_type=1">
+		<div class="commontb-box">
+			<table class="commontb-search">
+			<colgroup>
+		    		<col style="width: 18%">
+		    		<col style="width: 25%">
+		    		<col style="width: 15%">
+		    		<col style="width: 25%">
+		    		<col style="width: 15%">
+		    	</colgroup>
+		    	<tbody><tr>
+					<td class="label">纳税人或扣缴义务人识别号</td>
+					<td><input name="nsrsbh" class="fsrx" readonly="readonly" value="913211915524848086"></td>
+					<td class="label">纳税人或扣缴义务人名称</td>
+					<td><input name="nsrsbh" class="fsrx" readonly="readonly" value="江苏乾元新材料科技有限公司"></td>
+					<td></td>
+				</tr><!--
+				<tr>
+					<td class="label">申报表种类</td>
+					<td>
+						 <select name="sb_zlbh" style="width:100%; height: 25px;">
+				            
+	                 	</select>
+					</td>
+					<td colspan="3"></td>
+				</tr>
+				--><tr>
+					<td style="width:15%;" class="label">税款属期</td>
+					<td style="width:20%;">
+						<input style="width: 400px;" id="date1" class="jcDate1"/>
+					</td>
+					<td style="width:10%;" class="label">至</td>
+					<td style="width: 20%">
+						<input style="width: 400px;" id="date2" class="jcDate2"/>
+					</td>
+					<td></td>
+
+				</tr>
+				<tr>
+					<td class="label">申报日期</td>
+					<td>
+						<input style="width: 400px;" id="date3" class="jcDate"/>
+						<!--<input type="text" name="sbrq" id="sbrq" class="srx" onclick="WdatePicker({dateFmt:&#39;yyyy-MM&#39;})" value="2020-07">-->
+					</td>
+					<td class="label">申报状态</td>
+					<td><select name="zt" class="srx">
+							<!-- 默认为1 -->
+							<option value="1" selected="selected">全部</option>
+							<option value="4">申报成功</option>
+							<option value="6">缴费失败</option>
+							<option value="7">缴费成功</option>
+					</select>
+					</td>
+					<td></td>
+				</tr>
+			</tbody></table>
+			<br>
+			<table class="commontb">
+				<thead>
+					<tr class="thead">
+						<th>纳税人识别号</th>
+						<th>申报报表名称</th>
+						<th>申报所属期</th>
+						<th>申报日期</th>
+						<th>应补(退)税额</th>
+						<th>申报状态</th>
+						<th>详情</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+						<tr id="listrow" style="margin-top: 10px;" id="g1011321100005146090920060610101">
+							<td align="center" width="14%">913211915524848086</td>
+							<td align="center" width="22%">增值税一般纳税人申报</td>
+							<td align="center" id="taxmonth" width="16%">2020-06-01至2020-06-30</td>
+							<td align="center" id="taxdate" width="7%">2020-07-14</td>
+							<td align="center" id="taxfee" width="12%">￥12430.46</td>
+							<td align="center" width="7%">    缴费成功
+							</td>
+							<td align="center">
+
+				                    <!-- 电子税务局申报错误更正申报成功PDF查看 -->
+									  <!--<input type="button" onclick="querydetail(&#39;g1011321100005146090920060610101&#39;,&#39;10101&#39;,&#39;2020-06-01&#39;,&#39;2020-06-30&#39;,&#39;1&#39;,&#39;2020-07-14&#39;,this)" value="查看" class="sbactions">-->
+								<input type="button" onclick="showDialogPDF1();" style="align-content: center; width: 32px; display: block; position: relative; background: #1685ee; color: #fff; text-decoration: none; cursor: pointer;" value="查询"></input>
+								<!--<input type="button" onclick="querydetail();" style="align-content: center; width: 32px; display: block; position: relative; background: #1685ee; color: #fff; text-decoration: none; cursor: pointer;" value="查询"></input>-->
+								<!--<input type="button" onclick="querydetail();" value="查询"></input>-->
+								<!--<div class="btn_ho" onclick="querydetail();"  id="query_btn">查询</div>-->
+								<!--<div class="btn_ho" onclick="querydetail();"  id="query_btn">附加税申报</div>-->
+									<!--<input type="hidden" name="pdfInfo" value="10101001:10101001-d7a3d102163b068505f03259a4e8be68_A;10101002:10101002-13a9efc6edabca4b507504ff0c34b221_A;10101003:10101003-911d348051c3347b6acbb13e73e70f71_A;10101004:10101004-5f6458181fd0bbbfc7b000026fda47bc_A;10101005:10101005-7eb5da9ee931eeb5bd94aac3efc38c50_A;10101007:10101007-eb147488459d817c1036ceb6f408ff44_A;10101008:10101008-434d1e2ace75408d0c56ec228deff985_A;10101015:10101015-be4b2e7852416eb4092ac3059a9c3665_A;10101016:10101016-56491ba115c20ac1276f5f89fb2ee0e1_A;10101017:10101017-229ee19baf6a048282d3bdd69778c358_A;10101018:10101018-4a00cadbc9c16979e56276c981611c62_A;10101019:10101019-7c8d8c0d7d0880165c06d8d3a07a0c6b_A;">-->
+								 
+								
+								
+									<!-- 在金税三期上线同时，实现纳税人通过国税电子税务局进行增值税、消费税申报缴纳时，同时附征地税的相关税费。 -->
+									
+										
+											<!-- 申报错误更正暂时由于只支持开票后的更正,不支持更正附加税申报 -->
+											<!--<input type="button" onclick="queryFjssb(&#39;g1011321100005146090920060610101&#39;,&#39;10013220000118881732&#39;,&#39;10101&#39;,&#39;2020-06-01&#39;,&#39;2020-06-30&#39;,&#39;2020-07-14&#39;,&#39;10113211000169915694&#39;)" value="附加税申报" class="sbaction sbzw">-->
+										
+									
+								</td>
+						</tr>
+					
+					
+				</tbody>
+			</table>
+		</div>
+	</form>
+<!-- <iframe id="fjsfsbIframe" style="display: none;" src="./saved_resource(1).html">
+</iframe> -->
+	<input type="hidden" id="curMonth" value="2020-07">
+	<input type="hidden" id="swrybj" value="0">
+
+<!--<OBJECT id="SYSCHECK"
+	codebase="https://etax.jiangsu.chinatax.gov.cn/shenbao/activeX/JSGS_SYSCHECK_CTRL.cab#version=1,0,0,0"
+	CLASSID="CLSID:E8F1A55F-F664-4A49-A6FE-12B22C49CA82"
+	style='display:none' />
+</html>--></body></html>
+
+<script language="JavaScript">
+    var ss = "";
+    $("#listrow").hide();
+
+	function changedata() {
+	    var mon = $("#date3").val().replace("-","");
+
+	    if (mon == "202001") {
+            $("#listrow").show();
+            $("#taxmonth").html("2019-12-01至2019-12-31");
+            $("#taxdate").html("2019-12-12");
+            $("#taxfee").html("133349.10");
+            ss = "<iframe id='dialogjs' frameborder='0' align='center' height='100%' width='100%' src='listdetail201912.html'/>";
+		} else if (mon == "201901") {
+            $("#listrow").show();
+            $("#taxmonth").html("2018-12-01至2018-12-31");
+            $("#taxdate").html("2018-12-10");
+            $("#taxfee").html("87332.89");
+            ss = "<iframe id='dialogjs' frameborder='0' align='center' height='100%' width='100%' src='listdetail201812.html'/>";
+		} else if (mon == "202006") {
+            $("#listrow").show();
+            $("#taxmonth").html("2020-05-01至2020-05-31");
+            $("#taxdate").html("2020-05-09");
+            $("#taxfee").html("80617.77");
+            ss = "<iframe id='dialogjs' frameborder='0' align='center' height='100%' width='100%' src='listdetail202005.html'/>";
+    } else if (mon == "202101") {////new
+			$("#listrow").show();
+			$("#taxmonth").html("2020-12-01至2020-12-31");
+			$("#taxdate").html("2020-12-09");
+			$("#taxfee").html("176934.01");
+			ss = "<iframe id='dialogjs' frameborder='0' align='center' height='100%' width='100%' src='listdetail202012.html'/>";
+		} else if (mon == "202104") {////new
+			$("#listrow").show();
+			$("#taxmonth").html("2021-03-01至2021-03-31");
+			$("#taxdate").html("2021-03-08");
+			$("#taxfee").html("248815.09");
+			ss = "<iframe id='dialogjs' frameborder='0' align='center' height='100%' width='100%' src='listdetail202103.html'/>";
+		} else if (mon == "202107") {////new
+			$("#listrow").show();
+			$("#taxmonth").html("2021-06-01至2021-06-30");
+			$("#taxdate").html("2021-06-09");
+			$("#taxfee").html("276408.80");
+			ss = "<iframe id='dialogjs' frameborder='0' align='center' height='100%' width='100%' src='listdetail202106.html'/>";
+		} else if (mon == "202201") {////new
+			$("#listrow").show();
+			$("#taxmonth").html("2021-12-01至2021-12-31");
+			$("#taxdate").html("2021-12-09");
+			$("#taxfee").html("471507.74");
+			ss = "<iframe id='dialogjs' frameborder='0' align='center' height='100%' width='100%' src='listdetail202112.html'/>";
+		} else if (mon == "202204") {////new
+			$("#listrow").show();
+			$("#taxmonth").html("2022-03-01至2022-03-31");
+			$("#taxdate").html("2022-04-08");
+			$("#taxfee").html("152858.67");
+			ss = "<iframe id='dialogjs' frameborder='0' align='center' height='100%' width='100%' src='listdetail202203.html'/>";
+		}
+		  else {
+            $("#listrow").hide();
+		}
+	}
+
+
+    $(".jcDate1").jcDate({
+        Class : "", //为input注入自定义的class类（默认为空）
+        //Default: "today", //设置默认日期（默认为当天）
+        Event : "click", //设置触发控件的事件，默认为click
+        Speed : 100,    //设置控件弹窗的速度，默认100（单位ms）
+        Left : 0,       //设置控件left，默认0
+        Top : 22,       //设置控件top，默认22
+        Format : "-",   //设置控件日期样式,默认"-",效果例如：XXXX-XX-XX
+        DoubleNum: true, //设置控件日期月日格式，默认true,例如：true：2015-05-01 false：2015-5-1
+        Timeout : 100,   //设置鼠标离开日期弹窗，消失时间，默认100（单位ms）
+        OnChange: function() { //设置input中日期改变，触发事件，默认为function(){}
+            console.log('num change');
+
+        }
+    });
+
+
+    $(".jcDate2").jcDate({
+        Class : "", //为input注入自定义的class类（默认为空）
+        //Default: "today", //设置默认日期（默认为当天）
+        Event : "click", //设置触发控件的事件，默认为click
+        Speed : 100,    //设置控件弹窗的速度，默认100（单位ms）
+        Left : 0,       //设置控件left，默认0
+        Top : 22,       //设置控件top，默认22
+        Format : "-",   //设置控件日期样式,默认"-",效果例如：XXXX-XX-XX
+        DoubleNum: true, //设置控件日期月日格式，默认true,例如：true：2015-05-01 false：2015-5-1
+        Timeout : 100,   //设置鼠标离开日期弹窗，消失时间，默认100（单位ms）
+        OnChange: function() { //设置input中日期改变，触发事件，默认为function(){}
+            console.log('num change');
+        }
+    });
+
+    $(".jcDate").jcDate({
+        Class : "", //为input注入自定义的class类（默认为空）
+        //Default: "today", //设置默认日期（默认为当天）
+        Event : "click", //设置触发控件的事件，默认为click
+        Speed : 100,    //设置控件弹窗的速度，默认100（单位ms）
+        Left : 0,       //设置控件left，默认0
+        Top : 22,       //设置控件top，默认22
+        Format : "-",   //设置控件日期样式,默认"-",效果例如：XXXX-XX-XX
+        DoubleNum: true, //设置控件日期月日格式，默认true,例如：true：2015-05-01 false：2015-5-1
+        Timeout : 100,   //设置鼠标离开日期弹窗，消失时间，默认100（单位ms）
+        OnChange: function() { //设置input中日期改变，触发事件，默认为function(){}
+			var thisdate = $("#date3").val().substring(0,7);
+            $("#date3").val(thisdate);
+        }
+    });
+
+    var tod = new Date;
+    $("#date1").val("");
+    $("#date2").val("");
+    $("#date3").val(tod.getFullYear()+"-"+tod.getMonth());
+
+
+    function showDialogPDF1(){
+        $("<div></div>").append(
+            $(ss)).dialog({
+            autoOpen: true,
+            modal: true,
+            height: 600,
+            width: 850,
+            title: "详情",
+            resizable:false,
+            buttons:{
+
+            },
+            close: function() {
+                $(this).dialog('close');
+            }
+        });
+    }
+</script>

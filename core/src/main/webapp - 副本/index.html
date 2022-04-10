@@ -1,0 +1,632 @@
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>国家税务总局江苏省电子税务局</title>
+<link type="text/css" rel="stylesheet" href="css/main.css">
+<link href="favicon.ico" rel="shortcut icon">
+<link rel="stylesheet" type="text/css" href="css/layer.css">
+<link rel="stylesheet" type="text/css" href="css/loginDialog.css">
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/zrutil.js"></script>
+<script type="text/javascript" src="js/layer.min.js"></script>
+
+<!--[if IE 8]>
+	<style>
+		#channel .header {
+			background-image:none;
+			filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://etax.jiangsu.chinatax.gov.cn/sso/static/img/login_bg.png",sizingMethod="scale")
+		}
+		.help,.box,.login{
+			position:relative;
+		}
+	</style>
+<![endif]-->
+<script type="text/javascript">
+var _ca_login_time = "1595225174953";
+var _DZSWJ_URL = "https://etax.jiangsu.chinatax.gov.cn";
+var _nsrmc = "";
+</script>
+</head>
+<body>
+	<div id="channel">
+		<div class="header">
+			<div class="logo">
+				<img src="images/logo.png">
+			</div>
+			<div class="help">
+				<div class="list csj_index">
+					<img src="images/icon_csj.png" alt="长三角">长三角
+				</div>
+				
+				<div class="list hjjc">
+					<img src="images/hjjc.png" alt>环境检测
+				</div>
+				<div class="list download">
+					<img src="images/download.png">下载
+				</div>
+				<div class="list helper">
+					<img src="images/help.png">帮助
+				</div>
+			</div>
+			<div class="login">
+				<img src="images/login.png">
+				<p>登录</p>
+			</div>
+			<div class="box">
+				<div class="list go_portal">
+					<div class="listimg_outer">
+						<img src="images/wddb.png" alt>
+					</div>
+					<p>我的待办</p>
+				</div>
+				<div class="list go_login3">
+					<div class="listimg_outer">
+						<img src="images/wyyy.png" alt>
+					</div>
+					<p>我要预约</p>
+				</div>
+				<div class="list go_login3">
+					<div class="listimg_outer">
+						<img src="images/gxfw.png" alt>
+					</div>
+					<p>个性服务</p>
+				</div>
+				<div class="list tzgg">
+					<div class="listimg_outer">
+						<img src="images/tzgg.png" alt>
+					</div>
+					<p>通知公告</p>
+				</div>
+			</div>
+		</div>
+		<div class="center" >
+			<div class="box">
+				<!--<div onclick="window.location.href='4frame.html';" class="box">-->
+				<div class="list go_login0">
+					<img src="images/bg_wdxx.png"> <img class="gologin_icon" src="images/icon_wdxx.png">
+					<p>我的信息</p>
+				</div>
+				<div class="list go_login1">
+					<img src="images/bg_wybs.png"> <img class="gologin_icon" src="images/icon_wybs.png">
+					<p>我要办税</p>
+				</div>
+				<div class="list go_login2">
+					<img src="images/bg_wycx.png"> <img class="gologin_icon" src="images/icon_wycx.png">
+					<p>我要查询</p>
+				</div>
+				<div class="list go_login3">
+					<img src="images/bg_hdzx.png"> <img class="gologin_icon" src="images/icon_hdzx.png">
+					<p>互动中心</p>
+				</div>
+				<div class="list service">
+					<img src="images/bg_gzfw.png"> <img class="gologin_icon" src="images/icon_gzfw.png">
+					<p>公众服务</p>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="box">
+				<a class="img" href="http://bszs.conac.cn/sitename?method=show&id=072882BF9FE6030CE053022819AC8BF0" target="_blank" rel="noopener noreferrer">
+					<img src="images/dzjg.png">
+				</a>
+				<div class="info">
+					<p>版权所有：国家税务总局江苏省税务局</p>
+					<p>服务电话：12366</p>
+				</div>
+			</div>
+		</div>
+		
+			<div class="mask loginshow"></div>
+			<div class="logindiv loginshow">
+				
+
+
+
+<body>
+	<div class="page3" style="display: none; width: 900px; height: 450px;background-color:#fff">
+		<table class="block_table fs_15" cellspacing="0">
+			<thead>
+				<col width="5%"><col width="5%"><col width="18%"><col width="17%"><col width="45%"><col width="10%">
+				<tr><th>序号</th><th>选择</th><th>纳税人名称</th><th>登记来源</th><th>主管税务机关</th><th>状态</th></tr>
+			</thead>
+		</table>
+		<div class="tablebox">
+			<table id="nsrxxtable" class="block_table fs_15" cellspacing="0">
+				<col width="5%"><col width="5%"><col width="18%"><col width="17%"><col width="45%"><col width="10%">
+				<tbody id="nsrxxtbody">
+				</tbody>
+			</table>
+		</div>
+		<div class="nsrxxsystem">
+			<button id="nsrxxContinue">确定</button>
+		</div>
+	</div>
+	
+	<div class="page5" style="display: none; width: 900px; height: 450px;background-color:#fff">
+		<table class="block_table fs_15" cellspacing="0">
+			<thead>
+				<col width="5%"><col width="5%"><col width="25%"><col width="20%"><col width="45%">
+				<tr><th>序号</th><th>选择</th><th>涉税专业服务人员</th><th>证件类型</th><th>证件号码</th></tr>
+			</thead>
+		</table>
+		<div class="tablebox">
+			<table id="ssryxx_table" class="block_table fs_15" cellspacing="0">
+				<col width="5%"><col width="5%"><col width="25%"><col width="20%"><col width="45%">
+				<tbody id="ssryxx_tbody">
+				</tbody>
+			</table>
+		</div>
+		<div class="nsrxxsystem">
+			<button id="ssryxxContinue">确认</button>
+		</div>
+	</div>
+	
+	<div class="page6" style="display: none; width: 900px; height: 450px;background-color:#fff">
+		<table class="block_table fs_15" cellspacing="0">
+			<thead>
+				<col width="5%"><col width="5%"><col width="20%"><col width="25%"><col width="35%"><col width="10%">
+				<tr><th>序号</th><th>选择</th><th>纳税人识别号</th><th>纳税人名称</th><th>主管税务机关</th><th>身份</th></tr>
+			</thead>
+		</table>
+		<div class="tablebox">
+			<table id="dlyhqyxx_table" class="block_table fs_15" cellspacing="0">
+				<col width="5%"><col width="5%"><col width="20%"><col width="25%"><col width="35%"><col width="10%">
+				<tbody id="dlyhqyxx_tbody">
+				</tbody>
+			</table>
+		</div>
+		<div class="nsrxxsystem">
+			<button id="dlyhqyxxContinue">确认</button>
+		</div>
+	</div>
+	<div class="mask login_qrcode_yzm" style="display: none;z-index: 2;">
+		<div class="page8 dialog_mask" style="bottom:12%">
+			<div class="close_dialog"></div>
+			<div class="content qr_yzm" style="display:none">
+				<div class="cl tit_line">
+					<div class="fl tit">微信扫码登录</div>
+					<div class="fr">
+						<span class="type_info">短信登录</span><span class="threefoot"></span>
+						<img class="change_type" src="images/type_pc.png">
+					</div>
+				</div>
+				<div class="qrcode_box tcenter none qrcode_valid">
+					<img id="qrcode" src="https://etax.jiangsu.chinatax.gov.cn/sso/static/img/qrcode_temp.jpg">
+				</div>
+				<div class="qrcode_box tcenter qrbox none qrcode_invalid">
+					<img src="images/qrcode_timeout.png">
+					<div class="qrtextbox">
+						<p class="qrtit">
+							二维码已失效
+						</p>
+						<p class="qrbtn" id="qr_refresh">
+							点击刷新
+						</p>
+					</div>
+				</div>
+				<div class="qrcode_box tcenter qrbox none qrcode_besure">
+					<img src="images/qrcode_timeout.png">
+					<div class="qrtextbox">
+						<p class="qrtit" style="font-size:20px;">
+							扫码成功，请在手机端确认
+						</p>
+					</div>
+				</div>
+				<div class="info_box cl">
+					<img class="fl" src="images/scan.png">
+					<div class="info_text fl">
+					<!-- <span class="grey"></span> -->
+						<p class="text_line">打开微信</p>
+						<p class="text_line">扫一扫登录</p>
+					</div>
+				</div>
+				<!-- <div class="btn_box cl">
+					<div class="fr btn_text">注册登录</div>
+					<div class="fr btn_text">切换方式</div>
+					<div class="fr btn_text">短信验证</div>
+				</div> -->
+				<input type="hidden" id="qrcode_token">
+			</div>
+			<div class="content msg_yzm">
+				<div class="cl tit_line">
+					<div class="fl tit">手机短信登录</div>
+					<div class="fr">
+						<span class="type_info">扫码登录</span><span class="threefoot"></span>
+						<img class="change_type" src="images/type_qr.png">
+					</div>
+				</div>
+				<div class="telyzm_box login_input">
+					<span class="placeholder">手机号</span>
+					<input type="text" class="login_phone " id="sjhm_msg2" size="25" readonly>
+				</div>
+				<div class="telyzm_box login_input syz_yzm">
+					<div class="telyzm_block">
+						<div class="placeholder_box">
+							<span class="placeholder" style="left:36px">手机验证码</span>
+							<input type="text" class="login_name login_input" id="yzm_msg" size="25" autocomplete="off" style="width: 186px;">
+							<input type="hidden" id="sjhm_smg_encrypt">
+						</div>
+						<span class="send_msg_btn" id="send_msg_btn">获取验证码</span>
+					</div>
+				</div>
+				<div class="dlyh_btns">
+					<div id="login_msg_btn">登&nbsp;&nbsp;&nbsp;&nbsp;录</div>
+				</div>
+				<!-- <div class="btn_box cl">
+					<div class="fr btn_text">注册登录</div>
+					<div class="fr btn_text">切换方式</div>
+					<div class="fr btn_text">短信验证</div>
+				</div> -->
+			</div>
+		</div>
+	</div>
+	<div class="page7" style="display: none;">
+		<div class="dlyh_title">登&nbsp;&nbsp;&nbsp;录</div>
+		<div class="dlyh_login_dialog">
+			<div class="dlyhclass">
+				<input type="text" class="dlyh_name" id="dlqy_nsrsbh" size="25" name="dlqy_nsrsbh" placeholder="纳税人识别号" readonly>
+			</div>
+			<div class="dlyhclass">
+				<input type="password" class="dlyh_password" id="dlqy_pwd" size="25" name="dlqy_pwd" placeholder="请输入密码">
+			</div>
+		</div>
+		<input type="hidden" id="dlqy_djxh"> 
+		<div class="dlyh_btns">
+			<div id="dlyhLoginContinue">登&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;录</div>
+		</div>
+	</div>
+	
+	<div class="page2" style="display: none; padding: 0px;">
+		<div class="systembox" style="width: 618px; height: 402px;">
+			<div class="system">
+				<div class="moveempty" style="heigh: 20px;"></div>
+				<div class="system_top">
+					<span class="orange box" id="login_ts"></span>
+				</div>
+				<!-- <div class="system_middle">
+					<span class="system_user"><b>尊敬的纳税人（扣缴义务人）：</b></span>
+				</div> -->
+				<div class="system_content" style="height:320px; overflow-y: auto;">
+					<ul class="system_list">
+						<div class="message"></div>
+					</ul>
+				</div>
+				<div class="system_bottom">
+					<button id="backHome" style="display:none;">返回主页</button>
+					<button id="continueLogin">继续登录</button>
+					&nbsp;&nbsp;
+				</div>
+				<div class="system_info" id="displayInfo">
+					<input type="checkbox" id="check" onclick="onclickCheckBox()">不再显示
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="page4" style="display: none; padding: 0px; width: 650px; height: 430px; scrolling:no;">
+		<iframe style="width: 650px; height: 430px; border:0px; scrolling:no;"></iframe>
+	</div>
+	
+	
+<!-- 	<div class="page9">
+		<div class="dlyh_title" style="width:520px">提&nbsp;&nbsp;&nbsp;&nbsp;示</div>
+		<div class="yfslogin_dialog">
+			<p style="text-indent:2em;">自2020年9月1日起电子税务局将全面采用用户名+密码+微信扫码（或短信验证码）登录方式，原登录方式将停止使用，请相关办税人员尽快办理实名采集，具体采集方式可关注“江苏税务”微信公众号或者使用“江苏税务实名认证”微信小程序进行办理。若您发现相关办税人员信息有误，请登录后完成信息确认或至一照一码户信息变更模块及两证整合个体工商户信息变更模块完成信息变更。</p>
+		</div>
+	</div> -->
+	
+	<div class="page10" style="display: none; padding: 0px;">
+		<div class="systembox" style="width: 618px; height: 402px;">
+			<div class="system">
+				<div class="moveempty" style="heigh: 20px;"></div>
+				<div class="system_top">
+					<span class="orange box" id="login_ts"></span>
+				</div>
+				<div class="system_content" style="height:300px; overflow-y: auto;">
+					<ul class="system_list">
+						<div class="message">
+							<p style="text-align:center;margin-top:20px; font-size:20px;font-weight: 600;text-align:center;">提&nbsp;&nbsp;&nbsp;&nbsp;示</p>
+							<p style="text-indent:2em;margin-top:15px;font-size:14px;line-height:28px;">根据国家税务总局《电子税务局规范》要求，为防范用户信息被盗用、冒用等安全风险，切实保障您（单位）的合法权益，江苏省电子税务局自2020年7月1日起，升级调整单位纳税人用户登录方式。在现有登录方式上，增加登录人员个人实名验证，实名验证方式包括微信扫码或短信验证码验证。原登录方式将于2020年9月1日起停用。</p>
+							<p style="text-indent:2em;font-size:14px;line-height:28px;">为保障您（单位）正常登录江苏省电子税务局，请尽快确认相关使用人员登记信息准确性、完成实名认证信息采集。登录时如提示需进行办税人员信息确认的，请及时进行确认；办税人员需变更的，可使用【一照一码户信息变更】【两证整合个体工商户信息变更】功能办理。</p>
+						</div>
+					</ul>
+				</div>
+				<div class="system_bottom" style="margin-top: 0px;">
+					<button id="tsxx_sure_btn">确定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="js/loginDialog.js"></script>
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>国家税务总局江苏省电子税务局</title>
+
+<link rel="stylesheet" type="text/css" media="screen" href="css/yzwlogin.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/zrrlogin.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/dlyhLogin.css">
+<link rel="stylesheet" type="text/css" href="css/layer.css">
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/zrutil.js"></script>
+<script type="text/javascript" src="js/layer.min.js"></script>
+<script type="text/javascript" src="js/yzwLayerHandler.js"></script>
+<script type="text/javascript" src="js/sha256.js"></script>
+<script type="text/javascript" src="js/base64.js"></script>
+<script type="text/javascript" src="js/jquery_md5.js"></script>
+
+<script type="text/javascript" src="js/jsgxca.base.js"></script>
+<script type="text/javascript" src="js/casign2.js"></script>
+
+
+<script type="text/javascript">
+var captchcheck = "1";
+var _returncode = "";
+var _returnmess = "";
+var _ca_login_time = "1595225174953";
+var _returnloginmode = "";
+</script>
+<script type="text/javascript" src="js/yzwLogin.js"></script>
+<script type="text/javascript" src="js/yzwQrcodeLogin.js"></script>
+<script type="text/javascript" src="js/yzwSyzLogin.js"></script>
+<script type="text/javascript" src="js/zrrLogin.js"></script>
+<script type="text/javascript" src="js/dlyhLogin.js"></script>
+
+<!--[if IE 8]>
+	<style>
+		/*.login_password {
+			background-image:none;
+			filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://etax.jiangsu.chinatax.gov.cn/sso/static/img/login_password.png?v=1",sizingMethod="scale")
+		}
+		.login_name,.dlyh_login_name {
+			background-image:none;
+			filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://etax.jiangsu.chinatax.gov.cn/sso/static/img/login_name.png?v=1",sizingMethod="scale")
+		}
+		.login_phone {
+			background-image:none;
+			filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="https://etax.jiangsu.chinatax.gov.cn/sso/static/img/login_phone.png?v=1",sizingMethod="scale")
+		}*/
+		.help,.box,.login{
+			position:relative;
+		}
+		.mask{
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);
+		}
+	</style>
+<![endif]-->
+</head>
+<body>
+	<div>
+		<div id="div_calogin" style="display: none"></div>
+	</div>
+	<form id="formid" action="/sso/login" method="post">
+		<div class="index_login">
+			<div class="middle_content">
+				<div class="middle_content_login">
+						<div id="loading" style="display:none;"></div>
+						<div style="width: 100%; height: 55px; background-color:transparent;position: absolute;top:-55px;">
+							<ul id="gdstab_tab">
+								<li tab="qyPage" class="active_user">企业用户</li>
+								<li tab="zrrPage">自然人用户</li>
+								<li tab="dlyhPage">代理用户</li>
+								<div style="clear: both"></div>
+							</ul>
+						</div>
+						
+						<div class="qyPage usertab" style="width:90%;border-bottom:1px solid #eee;">
+							<ul id="tab" class="qyPage">
+								<li id="Userlogin">原方式登录</li>
+								<li id="UserloginMsg">用户名登录</li>
+								<li id="CAlogin">数字证书登录</li>
+								<li><a href="http://218.94.38.242:60107/uniformVerify/vertifyLogin.do?areaCode=jsTaxLogin&postURL=https://etax.jiangsu.chinatax.gov.cn/sso/yyzzlogin" style="color:#333333;font-size:14px;font-weight:bold;" target="_blank" rel="noopener noreferrer">电子营业执照</a></li>
+								<div style="clear: both"></div>
+							</ul>
+						</div>
+						<div class="zrrPage usertab" style="width:80%;border-bottom:1px solid #eee;display:none;">
+							<ul id="zrrtab" class="zrrPage" style="display:none;">
+								<li id="sjhmlogin">手机号码登录</li>
+								<li id="zjhmlogin">证件号码登录</li>
+								<!-- <li><a href='https://its.jsgs.gov.cn' style="color:#333333;font-size:14px;font-weight:bold;" target="_blank" rel="noopener noreferrer">个人所得税</a></li> -->
+								<div style="clear: both"></div>
+							</ul>
+						</div>
+						<div class="dlyhPage usertab" style="width:80%;border-bottom:1px solid #eee;display:none;">
+							<ul id="dlyhtab" class="dlyhPage">
+								<li id="dlyhlogin">用户名登录</li>
+								<li id="dlCalogin">数字证书登录</li>
+								<div style="clear: both"></div>
+							</ul>
+						</div>
+						<div class="login_input qyPage usertab">
+							<div style="height:35px; color:#666;position:relative;" class="yhmmsgclass">
+								<span class="placeholder">纳税人识别号/社会信用代码/用户名</span>
+								<input id="username_msg" name="username" class="login_name" tabindex="1" type="text" value size="25" autocomplete="off">
+							</div>
+							<div style="height:35px; color:#666;position:relative;" class="yhmmsgclass">
+								<span class="placeholder">密码</span>
+								<input type="password" class="login_password" id="password_msg" size="25" tabindex="2" name="password" autocomplete="off">
+							</div>
+							
+							<div style="height:35px; color:#666;position:relative;" class="yhmclass">
+								<span class="placeholder">纳税人识别号/社会信用代码/用户名</span>
+								<input id="username" name="username" class="login_name" tabindex="1" type="text" value size="25">
+							</div>
+							<div style="height:35px; color:#666;position:relative;" class="yhmclass">
+								<span class="placeholder">密码</span>
+								<input type="password" class="login_password" id="password" size="25" tabindex="2" name="password">
+							</div>
+							
+							<div style="line-height: 100px;color:#333333;height:85px;width:290px;" class="caclass">
+								<img style="vertical-align: middle;" src="images/USB1.gif">
+								<span style="margin-left:10px;">请先把CA插至USB口上</span>
+							</div>
+							<!-- <div style="height:35px; color:#666;position:relative;" class="caclass">
+								<span class="placeholder" >请输入电子税务局登录密码</span>
+								<input type="password" class="login_password" id="password_ca" size="25" tabindex="2"/>
+							</div> -->
+							<input type="hidden" id="loginmode" name="loginmode">
+							<input type="hidden" id="djxh" name="djxh">
+							<input type="hidden" id="dsdjxh" name="dsdjxh">
+							<input type="hidden" id="redirectUrl" name="redirectUrl">
+							<input type="hidden" id="sjhm_msg_encrypt" name="sjhm_msg_encrypt">
+						</div>
+						
+						<div class="login_input zrrPage usertab" style="display:none;">
+							<div style="height:35px; color:#666;position:relative;" class="sjhmclass">
+								<span class="placeholder">手机号码</span>
+								<input type="text" class="login_phone" id="zrrsjhm" size="25" tabindex="1" name="zrrsjhm" autocomplete="off">
+							</div>
+							<div style="height:35px; color:#666;position:relative;" class="sjhmclass">
+								<span class="placeholder">密码</span>
+								<input type="password" class="login_password" id="zrrmm" size="25" tabindex="2" name="zrrmm" autocomplete="off">
+							</div>
+							
+							<div style="height:35px; color:#666;position:relative;display:none;" class="zjhmclass">
+								<select id="zrrzjlx" size="1" name="zrrzjlx" class="login_zjlx">
+									<option value="201" selected>居民身份证</option>  
+								</select>
+							</div>
+							<div style="height:35px; color:#666;position:relative;display:none;" class="zjhmclass">
+								<span class="placeholder">证件号码</span>
+								<input type="text" class="login_name" id="zrrzjhm" size="25" tabindex="1" name="zrrzjhm" autocomplete="off">
+							</div>
+							<div style="height:35px; color:#666;position:relative;display:none;" class="zjhmclass">
+								<span class="placeholder">密码</span>
+								<input type="password" class="login_password" id="zrrzjmm" size="25" tabindex="2" name="zrrzjmm" autocomplete="off">
+							</div>
+							<span style="color:#868686">仅限自然人车辆购置税申报及代开发票申请</span>
+						</div>
+						<div class="login_input dlyhPage usertab" style="display:none;">
+							<div style="height:35px; color:#666;position:relative;" class="dlyh_class">
+								<span class="placeholder">纳税人识别号/社会信用代码/用户名</span>
+								<input type="text" class="dlyh_login_name" id="dlyh_username" size="25" tabindex="1" autocomplete="off">
+							</div>
+							<div style="height:35px; color:#666;position:relative;" class="dlyh_class">
+								<span class="placeholder">密码</span>
+								<input type="password" class="login_password" id="dlyh_password" size="25" tabindex="2" autocomplete="off">
+							</div>
+							<div style="line-height: 100px;color:#333333;height:85px;width:290px;" class="dlyh_caclass">
+								<img style="vertical-align: middle;" src="images/USB1.gif">
+								<span style="margin-left:10px;">请先把CA插至USB口上</span>
+							</div>
+							<input type="hidden" id="dllogin_mode">
+						</div>
+						
+						<div style="width:310px; margin:20px auto 0;">
+							<div style="margin: 10px auto;" id="captcha_div"></div>
+							
+						</div>
+						<div class="login_input usertab qyPage" style="margin-top:20px;">
+							<div style="width:87%;margin:0 auto;">
+								<div style="height:35px; color:#666;position:relative;width:49%;float:left;margin:0 2% 0 0;" class="yhmmsgclass telyzm_box">
+									<select class="login_name" id="sflx_sel">
+										<option value>请选择身份</option>
+										<option value="10">法定代表人</option>
+										<option value="20">财务负责人</option>
+										<option value="30">办税人员</option>
+									</select>
+								</div>
+								<div style="height:35px; color:#666;position:relative;width:49%;float:left;margin:0" class="yhmmsgclass telyzm_box">
+									<select class="login_name" id="ry_sel">
+										<option value>请选择人员</option>
+									</select>
+								</div>
+								<div style="clear:both"></div>
+							</div>
+							<!-- <div style="height:35px; color:#666;position:relative;" class="yhmmsgclass telyzm_box">
+								<span class="placeholder" >手机号码</span>
+								<input type="text" class="login_phone" id="sjhm_msg" size="25" tabindex="2" name="login_phone" autocomplete="off" readonly/>
+							</div> -->
+						</div>
+						<div class="qyPage usertab">
+							<div class="yhmmsgclass clear">
+								<a style="color: #128cda;text-decoration: underline;cursor: pointer;float:left;" target="_blank" href="https://etax.jiangsu.chinatax.gov.cn/shenqing/ywForm/csjkqdj.action?sign=sfyz" rel="noopener noreferrer">长三角跨区税源登记开户</a>
+								<span style="float:right">
+									<a style="color: #128cda;text-decoration: underline;cursor: pointer;margin-right:10px;" target="_blank" href="https://etax.jiangsu.chinatax.gov.cn/shenqing/ywForm/kqybydj.action?sign=openKqybydj" rel="noopener noreferrer">长三角报验开户</a>
+									<a style="color: #128cda;text-decoration: underline;cursor: pointer;margin-right:10px;" target="_blank" onclick="openKhxz();" rel="noopener noreferrer">新办开户</a>
+									<a style="color: #128cda;text-decoration: underline;cursor: pointer;" target="_blank" href="https://etax.jiangsu.chinatax.gov.cn/sso/nsr/xgmm" rel="noopener noreferrer">忘记密码</a>
+								</span>
+								<span style="float:left">
+									<a style="color: #128cda;text-decoration: underline;cursor: pointer;" target="_blank" href rel="noopener noreferrer" id="yjxf_download2">一键修复</a>
+								</span>
+							</div>
+							<div class="yhmclass clear">
+								<a style="color: #128cda;text-decoration: underline;cursor: pointer;float:left;" target="_blank" href="https://etax.jiangsu.chinatax.gov.cn/shenqing/ywForm/csjkqdj.action?sign=sfyz" rel="noopener noreferrer">长三角跨区税源登记开户</a>
+								<span style="float:right">
+									<a style="color: #128cda;text-decoration: underline;cursor: pointer;margin-right:10px;" target="_blank" href="https://etax.jiangsu.chinatax.gov.cn/shenqing/ywForm/kqybydj.action?sign=openKqybydj" rel="noopener noreferrer">长三角报验开户</a>
+									<a style="color: #128cda;text-decoration: underline;cursor: pointer;margin-right:10px;" target="_blank" onclick="openKhxz();" rel="noopener noreferrer">新办开户</a>
+									<a style="color: #128cda;text-decoration: underline;cursor: pointer;" target="_blank" href="https://etax.jiangsu.chinatax.gov.cn/sso/nsr/xgmm" rel="noopener noreferrer">忘记密码</a>
+								</span>
+								<span style="float:left">
+									<a style="color: #128cda;text-decoration: underline;cursor: pointer;" target="_blank" href rel="noopener noreferrer" id="yjxf_download">一键修复</a>
+								</span>
+							</div>
+							<div class="caclass">
+								<span style="float:left;width:100%;text-align:right">
+									<a style="color: #128cda;text-decoration: underline;cursor: pointer;" target="_blank" href="https://etax.jiangsu.chinatax.gov.cn/sso/nsr/xgmm" rel="noopener noreferrer">忘记密码</a>
+									<a style="color:#4585eb;text-decoration: underline;cursor: pointer;" href="http://www.jsca.com.cn/servicedip/266.jhtml" target="_blank" rel="noopener noreferrer">江苏CA驱动</a>&nbsp;
+									<a style="color:#4585eb;text-decoration: underline;cursor: pointer;" id="zjcaqd_download" href target="_blank" rel="noopener noreferrer">总局CA驱动</a>
+								</span>
+							</div>
+						</div>
+						
+						<div class="zrrPage usertab" style="display:none;">
+							<div class="sjhmclass">
+								<span style="float:left;width:100%;text-align:right"> 
+									<a style="color: #128cda;text-decoration: underline;cursor: pointer;" target="_blank" href="https://etax.jiangsu.chinatax.gov.cn/sso/zrr/zc" rel="noopener noreferrer">立即注册</a>&nbsp;
+									<a style="color: #128cda;text-decoration: underline;cursor: pointer;" target="_blank" href="https://etax.jiangsu.chinatax.gov.cn/sso/zrr/zhmm" rel="noopener noreferrer">忘记密码</a>
+								</span>
+							</div>
+						</div>
+<!-- 						<div class="dlyhPage usertab" style="display:none;">
+							<div class="dlyh_caclass">
+								<span style="float:left;margin:20px 5px 0 220px;">
+									<a style="color:#4585eb;text-decoration: underline;cursor: pointer;" 
+										href="http://www.jsca.com.cn/servicedip/266.jhtml" target="_blank" rel="noopener noreferrer">江苏CA驱动</a>&nbsp;
+									<a style="color:#4585eb;text-decoration: underline;cursor: pointer;" id="zjcaqd_download" 
+										href="" target="_blank" rel="noopener noreferrer">总局CA驱动</a>
+								</span>
+							</div>
+						</div> -->
+						<div class="login_btn">
+							<input type="hidden" name="lt" value="LT-42245-knGqRptdHeaip4rn9CVW0MltFN1Nev-sso.jsgs.gov.cn"> 
+							<input type="hidden" name="execution" value="e2s1">
+							<input type="hidden" name="_eventId" value="submit">
+							<input class="btn_submit" onclick="window.location.href='4frame.html';"  type="button" value="登  录">
+							<div style="clear: both"></div>
+						</div>
+						
+						<div class="zrrPage usertab" style="display:none;">
+							<div class="sjhmclass zrrgrsds">
+								<div style="color:#868686;margin-bottom:4px;">-登录自然人税收管理系统----------------------------------------</div>
+								<img src="images/zrrgrsds.png" style="cursor:pointer;" onclick="window.open('https://etax.chinatax.gov.cn');">
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+	</form>
+
+	<script src="js/load.min.js"></script>
+
+<script type="text/javascript" src="js/yzwAlert.js"></script>
+</body>
+</html>
+
+				<div class="close_logindiv"></div>
+			</div>
+		
+		<div class="mask pageWxtsShow"></div>
+		<div class="pageWxts">
+			<iframe class="frameWxts"></iframe>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="js/index.js"></script>
+</html>

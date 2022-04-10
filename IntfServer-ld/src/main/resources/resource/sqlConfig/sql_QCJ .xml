@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<sqlConfig>
+
+    <sql id="getQCJState">
+        <![CDATA[
+                SELECT TOP 50  'QC'+MachineCode deviceCode, SamReady deviceStatus from Machine_Tb
+        ]]>
+    </sql>
+	    
+    <sql id="getQCJSubDeviceState">
+        <![CDATA[
+                select TOP 50  'QC'+machineCode+deviceCode deviceCode, deviceName, deviceStatus from State_tb
+        ]]>
+    </sql>
+	
+	<sql id="getQCJBarrelInfo">
+        <![CDATA[
+                select TOP 50 'QC'+machineCode machineCode, barrelCode, sampleNumber sampleCode, samNumber, barrelStatus from barrel_tb;
+        ]]>
+    </sql>
+	
+	<sql id="getQCJCarID">
+		<![CDATA[
+				 select TOP 1  'QCCY01CH' deviceCode ,carid  from cmd_tb  order by no desc;
+		]]>
+     </sql>
+	 
+	<sql id="getQCJCarNum">
+		<![CDATA[
+				Select 'QCCY01CS' deviceCode ,isnull(count(*),0) carnum 
+				From cmd_tb 
+				Where Convert(varchar(10),[sendcommandtime],120) > Convert(varchar(10),getDate(),120) 
+		]]>	
+	</sql>
+	 	 	 
+</sqlConfig>

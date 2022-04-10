@@ -1,0 +1,341 @@
+html{
+	font-family:"Microsoft YaHei"
+}
+*{
+  		margin:0;
+  		padding:0;
+  		vertical-align:top;
+  	}
+  	#channel .header{
+	position: relative;
+	width: 100%;
+	height: 460px;
+	background-color: #1e82d8;
+	overflow: hidden;
+	background-image: url(../images/login_bg.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+  	#channel{
+	position: relative;
+	width: 100%;
+	box-sizing:border-box;
+	height: 100%;
+	margin:0 auto;
+}
+#channel .header .logo img{
+	height:100%;
+}
+#channel .box{
+	min-width: 1200px;
+	margin: 0 auto;
+	max-width:1700px;
+}
+#channel .help .list:hover{
+	text-shadow:#1991b9 1px 0 10px,#1991b9 0 1px 10px,#1991b9 -1px 0 10px,#1991b9 0 -1px 10px;
+}
+#channel .header .box{
+	margin-top: 238px;
+	min-width: 1200px;
+	height: 150px;
+	text-align: center
+}
+#channel .header .logo{
+	float:left;
+	margin-top: 15px;
+	margin-left: 30px;
+	width: 66px;
+	height: 83px;
+}
+#channel .header .login{
+	position: absolute;
+	right: 34px;
+	top: 63px;
+	text-align: center;
+	color: #fff;
+	font-size: 16px;
+}
+#channel .header .login img:hover{
+	    box-shadow: 0 0 30px #1991b9;
+}
+#channel .header .login img{
+	display: block;
+	width: 48px;
+	height: 48px;
+	margin-bottom: 10px;
+	border-radius: 50%;
+}
+#channel .header .help{
+	float:right;
+	margin-top:12px;
+	/* color: #d2e6f7; */
+	font-size: 16px;
+	font-family: "Microsoft YaHei";
+	color: #fff;
+}
+#channel .header .help .list{
+	display:  inline-block;
+	margin-right: 30px;
+}
+#channel .header .help .list img{
+	width: 18px;
+	position: relative;
+	top: 3px;
+	margin-right: 5px;
+}
+#channel .header .box .list{
+	display: inline-block;
+	width: 105px;
+	margin:  0 60px 0 60px;
+}
+#channel .header .box .list .listimg_outer{
+	display: block;
+	width: 101px;
+	height: 101px;
+	margin-bottom: 20px;
+	border-radius:52px;
+	border:2px solid #81e1ff;
+	background-color:rgba(255,255,255,0.8);
+}
+#channel .header .box .list .listimg_outer img{
+	width:48px;
+	height:48px;
+	margin-top:26px;
+}
+#channel .header .box .list:hover .listimg_outer{
+	box-shadow:0 0 30px #1991b9;
+	background-color:#fff;
+}
+#channel .header .box .list:hover .listimg_outer img{
+	width:60px;
+	height:60px;
+	margin-top:20px;
+}
+#channel .header .box .list p{
+	color: #fff;
+	font-size:16px;
+	text-align: center;
+	text-shadow:#0994bc 1px 0 0,#0994bc 0 1px 0,#0994bc -1px 0 0,#0994bc 0 -1px 0;
+}
+#channel .header .box .list:hover p{
+	text-shadow:#1991b9 1px 0 10px,#1991b9 0 1px 10px,#1991b9 -1px 0 10px,#1991b9 0 -1px 10px;
+}
+#channel .header .logo-text{
+	float:left;
+	margin-top: 35px;
+	margin-left: 20px;
+	font-size: 30px;
+	color: #fff;
+	font-weight: bold
+}
+#channel .center{
+	width: 100%;
+	height: 274px;
+	text-align: center;
+}
+#channel .center .list{
+	position: relative;
+	display: inline-block;
+	width: 200px;
+	margin:  80px 12px 0 12px;
+	position:relative;
+}
+#channel .center .list img:first-child{
+	width: 200px;
+	height: 120;
+	max-width:270px;
+	min-width:200px;
+	left:0;
+	right:0;
+	border-radius:6px;
+	min-height:120px;
+}
+#channel .center .go_login0:hover img:first-child{
+	box-shadow:0 0 30px #67bbe7;
+}
+#channel .center .go_login1:hover img:first-child{
+	box-shadow:0 0 30px #a1dc74;
+}
+#channel .center .go_login2:hover img:first-child{
+	box-shadow:0 0 30px #95aded;
+}
+#channel .center .go_login3:hover img:first-child{
+	box-shadow:0 0 30px #edce69;
+}
+#channel .center .service:hover img:first-child{
+	box-shadow:0 0 30px #f5b697;
+}
+#channel .gologin_icon{
+	position:absolute;
+	top:26px;
+	left:0;
+	right:0;
+	margin:0 auto;
+	height:44px;
+}
+#channel .center .list p{
+	width:100%;
+	text-align:center;
+	color: #fff;
+	position: absolute;
+	z-index: 1;
+	font-size: 16px;
+	top: 80px;
+	letter-spacing: 3px;
+}
+#channel .footer{
+	bottom: 0;
+	width: 100%;
+	height: 82px;
+	background-color: #e5e7ea;
+}
+#channel .footer .box{
+	text-align: center;
+}
+#channel .footer .img{
+	display: inline-block;
+	position: relative;
+	top: 12px;
+	margin-right: 20px;
+	width: 49px;
+	height: 62px;
+}
+#channel .footer .info{
+	display: inline-block;
+	text-align: left;
+	font-size: 14px;
+	color: #666;
+	line-height: 24px;
+	margin-top:18px;
+}
+#check{
+		font-size:14px;
+	color:#333;
+}
+#check h2{
+	font-size:24px;
+	color:#000;
+	margin:20px 0;
+}
+#check .line1 h4{
+	font-weight:normal;
+	text-indent:2em;
+	font-size:14px;
+	color:#666;
+	margin-bottom:20px;
+}
+#check h3{
+	padding-left:20px;
+	border-left:5px solid #ff8800;
+	margin:40px 0 20px;
+}
+#check .center{
+	text-align:center;
+}
+#check li{
+	font-size:14px;
+	color:#666;
+	list-style:none;
+}
+#check b{
+	color:#333;
+}
+#check .conteniar{
+	width:80%;
+	padding:35px 50px;
+	margin:20px auto;
+	background-color:#fff;
+	text-align:left;
+	border:1px solid #4585eb;
+}
+#check .header{
+	height: 105px;
+	background: url(../images/header.png) no-repeat 0 0;
+	background-size: 100%;
+	position: relative;
+	margin: 0;
+}
+#check .header>.logo {
+	width: 507px;
+	height: 85px;
+	position: absolute;
+	top: 12px;
+	left: 20px;
+	margin: 0;
+	background: url(../images/logo.png) no-repeat 0 0;
+}
+#check #zfzjgxx_download{
+	border-collapse: collapse;
+	width: 100%;
+	margin-top: 20px;
+}
+#check #zfzjgxx_download td,#check #zfzjgxx_download th{
+	padding: 8px 20px;
+}
+*{
+	vertical-align:top;
+}
+.center .box{
+	min-height:274px;
+}
+.mask{
+	width:100%;
+	height:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	background-color:rgba(0,0,0,0.4);
+	z-index:1;
+}
+.logindiv{
+	width:460px;
+	height:430px;
+	position:fixed;
+	right:0;
+	bottom:0;
+	top:0;
+	left:0;
+	margin:auto;
+	z-index:1;
+}
+.close_logindiv{
+	position:absolute;
+	top:40px;
+	right:-15px;
+	width:30px;
+	height:30px;
+	background: url(../images/xubox_ico0.png) no-repeat;
+	background-position: -60px -195px;
+	cursor:pointer;
+}
+.close_logindiv:hover{
+	background-position: -91px -195px;
+}
+.xubox_setwin .xubox_close1{
+	z-index:1;
+}
+.loginshow{
+	display:none;
+}
+.pageWxtsShow{
+	display: none;
+}
+.pageWxts{
+	/* border:1px solid #aaa; */
+	border:0;
+	padding-bottom:60px;
+	position:relative;
+	display: none;
+	padding: 0px;
+	width: 800px;
+	height: 460px;
+	scrolling:no;
+}
+.pageWxts .frameWxts{
+	width: 800px;
+	height: 460px;
+	border:0px;
+	scrolling:no;
+}

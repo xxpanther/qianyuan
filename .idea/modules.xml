@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ERPIntf.iml" filepath="$PROJECT_DIR$/ERPIntf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IntfServer-ld/IntfServer-ld.iml" filepath="$PROJECT_DIR$/IntfServer-ld/IntfServer-ld.iml" />
+      <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" />
+    </modules>
+  </component>
+</project>

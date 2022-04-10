@@ -1,0 +1,28 @@
+#zrrtab .on{color:#333333;background:none;border-bottom:2px solid rgb(65,131,248);}
+#zrrtab{padding-top:10px}
+#zrrtab li{ height:35px; line-height:35px; float:left;  cursor:pointer; border-bottom:2px solid #fff; 
+	width:33.3333%;  text-align:center; background:none; color:#333333; font-size:14px;font-weight:bold; border:none;letter-spacing: 2px;}
+.login_phone {
+    background: url(../images/login_phone.png) 0px 0px no-repeat;
+    /* border: 0 none; */
+    border: 1px solid #c0c0c0;
+    border-radius:2px;
+    height: 35px;
+    line-height: 35px;
+    margin-bottom: 10px;
+    padding: 0 0 0 70px;
+    vertical-align: middle;
+    width: 100%;
+}
+.login_zjlx {
+    border: 1px solid #c0c0c0;
+    border-radius:2px;
+    font-size: 14px;
+    color: #888;
+    height: 35px;
+    line-height: 35px;
+    margin-bottom: 10px;
+    padding: 0 0 0 5px;
+    vertical-align: middle;
+    width: 100%;
+}

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<sqlConfig>
+    <sql id="getCyjState">
+        <![CDATA[
+                SELECT TOP 50  'PC'+MachineCode deviceCode, SamReady deviceStatus FROM cy_status_tb
+        ]]>
+    </sql>
+
+    <sql id="getCyjSubDeviceState">
+        <![CDATA[
+                select TOP 50  'PC'+machineCode+deviceCode deviceCode, deviceName, deviceStatus from cy_state_tb
+        ]]>
+    </sql>
+
+    <sql id="getCyjBarrelInfo">
+        <![CDATA[
+                select TOP 50 'PC'+machineCode machineCode, barrelCode, sampleId sampleCode, samNumber, barrelStatus from cy_barrel_tb
+        ]]>
+    </sql>
+
+    <sql id="getCyjDumpInfo">
+        <![CDATA[
+                SELECT TOP 50 sampleId, result FROM CY_Result_Tb where dataStatus = 0
+        ]]>
+    </sql>
+
+    <sql id="writeBackCyjDump">
+        <![CDATA[
+                update  CY_Result_Tb set dataStatus = 1 where dataStatus = 0 and sampleId = ?
+        ]]>
+    </sql>
+
+    <sql id="getCyjError">
+        <![CDATA[
+                SELECT TOP 50  machineCode, errorCode, CONVERT(varchar(100), errorTime, 20) errorTime, errorDec FROM CY_err_Tb where dataStatus = 0
+        ]]>
+    </sql>
+
+    <sql id="writeBackCyjError">
+        <![CDATA[
+                update CY_err_Tb set dataStatus = 1 where dataStatus = 0 and machineCode = ? and errorCode = ?
+        ]]>
+    </sql>
+
+    <sql id="getCyjRecord">
+        <![CDATA[
+                SELECT TOP 50 machineCode, sampleId, packCode, sampleType, CONVERT(varchar(100), startTime, 20) startTime, CONVERT(varchar(100), endTime, 20) endTime, userName  FROM CY_record_Tb where dataStatus = 0
+        ]]>
+    </sql>
+
+    <sql id="writeBackCyjRecord">
+        <![CDATA[
+                update CY_record_Tb set dataStatus = 1  where dataStatus = 0 and machineCode = ? and sampleId = ?
+        ]]>
+    </sql>
+</sqlConfig>

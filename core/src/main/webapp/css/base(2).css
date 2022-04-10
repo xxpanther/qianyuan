@@ -1,0 +1,1965 @@
+body {
+	margin:0px;padding:0px;font-size:12px;overflow: hidden;color: #333;
+	overflow:auto;
+	font-family: ""
+}
+a{
+	color: #333;
+}
+body,input,textarea{font-family:'Microsoft Yahei',verdana;}
+header,footer,section,aside,article,nav,hgroup,figure,figcaption,body,h1,h2,h3,h4,h5,h6,ul,ol,li,form,p,dl,dt,dd,blockquote,legend,table,th,td,fieldset,menu,pre{
+	margin:0px;padding:0px;
+}
+header,footer,section,aside,article,nav,hgroup,figure,figcaption{
+	display:block;
+}
+ul,ol{
+	list-style:none;
+}
+table,th,td,img,fieldset{
+	border:0;
+	font-size:12px;
+}
+table {
+	/* border-collapse: collapse; */
+	border-spacing: 0;
+}
+#tableId{
+	margin-left: 180px;
+}
+input{
+	vertical-align: middle;
+}
+li{
+	list-style-type:none;
+}
+h1,h2,h3,h4,h5,h6,th{
+	font-size:100%;font-weight:normal;
+}
+a:link { text-decoration:none; }
+a:visited {text-decoration:none; }
+a:hover{text-decoration:none;}
+.buttonBox{
+	outline:none;
+	cursor:pointer;
+	text-align:center;
+	text-decoration:none;
+	width: 85px;
+	height: 28px;
+	line-height: 28px;
+	font-size: 14px;
+	letter-spacing: 2px;
+	color:#fff;
+	cursor: pointer;
+	background: url(../indeximg/btn1.png) no-repeat;	
+	border: none;
+	
+}
+
+.button{
+	outline:none;
+	cursor:pointer;
+	text-align:center;
+	text-decoration:none;
+	width: 85px;
+	height: 30px;
+	width: 1000px;
+}
+.MIdCont{
+}
+.declareInfo label{
+	float: left;
+    line-height: 35px;
+    text-align: center;
+    width: 33px;
+}
+.declareInfo span{
+	display: block;
+    float: left;
+    
+	line-height: 30px;
+    width: 100px;
+    
+	margin-left: 28px;
+}
+.declareInfo input{
+	border: 1px solid #c1c1c1;
+    display: block;
+    float: left;
+    height: 21px;
+    width: 150px;
+    margin-top: 8px;
+}
+.declareBtnBox{
+	float: left;
+    width: 100%;
+	font-size: 14px;
+	background-color: #FFFEEA;
+}
+.declareTop{
+	/* background: #f9f9f9; */
+    float: left;
+    min-height: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: 100%;  
+}
+.decFontTop{
+	color: #12629b;
+    font-size: 15px;
+    font-weight: bold;
+}
+.littleTop{
+	height: 20px;
+    line-height: 20px;
+    width: 100%;
+}
+.declareTop span{
+	display:block;
+	min-height:25px;
+	width:98%;
+	margin-left:1%;
+	border-top:1px solid #dfdfdf;
+}
+.topuseInfo{
+	height:25px;
+	line-height:25px;
+	width:100%;
+}
+.topuseInfo p{
+	text-align: left;
+	float: left;
+	padding-left:20px;
+}
+.topuseInfo label{
+	text-align: right;
+	float: right;
+	padding-right:20px;
+}
+.decTabs{
+	background: #c9e3ff;
+    
+	border-bottom: 1px solid #7ecef4;
+    float: left;
+    height: 25px;
+    width: 100%;
+}
+.decTabsBtn{
+	cursor: pointer;
+	border-left: 1px solid #e2f6ff;
+	border-right: 1px solid #7ecef4;
+    float: left;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    width: 165px;
+}
+.decTabsSelect{
+	cursor: pointer;
+	background:#41a1ce;
+    border-left: 1px solid #0f709d;
+    border-right: 1px solid #7ecef4;
+    border-top: 1px solid #0f709d;
+    color: #fff;
+    font-weight: bold;
+    float: left;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    width: 165px;
+}
+.decContent{
+	float:left;
+	width:100%;
+	/*min-height:400px;*/
+	background: #f9f9f9;
+}
+.decContentTable{
+	
+	float: left;
+    margin-left: 1.3%;
+    margin-top: 15px;
+    width: 48%;
+    border-right:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    border-left:1px solid #ccc;
+}
+.decContentTable table{
+	/* width: 100%; */
+	font-size: 12px;
+}
+.decContentTable table tr th,.decContentTable table tr td{
+	border-right:1px solid #ededed;
+	border-bottom:1px solid #ededed;
+	height: 25px;
+}
+.decContentTable table tr td{
+	text-align: center;
+}
+.decContentTable table tr th{
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	background:#ecf5ff;
+	background: -moz-linear-gradient(center top , #fff, #f2f2f2) repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.decAloneContentTable table{
+	width: 100%;
+	font-size: 12px;
+}
+.decAloneContentTable tr th,.decAloneContentTable tr td{
+	border-right:1px solid #ededed;
+	border-bottom:1px solid #ededed;
+	height: 25px;
+}
+.decAloneContentTable tr td{
+	text-align: center;
+}
+.decAloneContentTable tr th{
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	background:#ecf5ff;
+	background: -moz-linear-gradient(center top , #fff, #f2f2f2) repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+.decAloneContentTable {
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    float: left;
+    margin-left: 0.9%;
+    margin-top: 15px;
+  
+    width: 98%;
+}
+.decSave{
+	width:100%;
+	float:left;
+	height: 65px;
+	background:#f9f9f9;
+}
+ .decBtn {
+    display: block;
+    height: 31px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-top: 0;
+    width: 82px;
+ } 
+/*发票首页*/
+.invoiceright img{
+	height:100px;
+	display: block;
+    float: right;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    z-index: 0;
+}
+.openInvoce{
+	height:30px;
+	width:400px;
+	z-index:100;
+	position: absolute;
+}
+.withBtn{
+	background:#fff;
+    border: medium none;
+    border-radius: 3px;
+    color: #12629b;
+    float: left;
+    font-weight: bold;
+    height: 30px;
+    margin-left: 40px;
+    margin-top: 22px;
+    width: 133px;
+    cursor: pointer;
+}
+.withBtn:hover{
+	background:#7ecef4;
+	color:#fff;
+}
+.invoiceleftimg{
+	height:100px;
+	width:100px;
+	float:left;
+}
+.invoiceleftimg img{
+	margin-left: 20px;
+    margin-top: 10px;
+}
+.invoiceleftimg span{
+	display: block;
+    float: left;
+    height: 15px;
+    margin-top: 6px;
+    text-align: center;
+    width: 100px;
+}
+.invoiceleftimg span p{
+	color: #12629b;
+    float: left;
+    font-weight: bold;
+    padding-left: 15px;
+}
+.invItemBox{
+	width:250px;
+	float:left;
+	margin-left: 40px;
+	margin-top: 10px;
+}
+.invItem{
+	height:25px;
+	line-height:25px;
+	width:250px;
+	float:left;
+}
+.invItem label{
+	color: #12629b;
+    display: block;
+    float: left;
+    width: 95px;
+}
+.countBox{
+	float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+.countTop{
+	float: left;
+    height: 25px;
+    width: 100%;
+}
+.countTop span{
+	background:#fbfbfb;
+    border: 2px solid #f2f2f2;
+    border-bottom:none;
+    display: block;
+    float: left;
+    font-weight: bold;
+    line-height: 25px;
+    padding-left: 20px;
+    width: 154px;
+}
+.countContent{
+	background:#fbfbfb;
+    border: 2px solid #f2f2f2;
+    width:100%;
+    padding-bottom: 15px;
+    float: left;
+}
+.countTemp{
+	width:300px;
+    height:25px;
+    float: left;
+    line-height:25px;
+    margin-left:30px;
+    margin-top: 20px;
+}
+.counBj{
+	color: #fff;
+    float: left;
+    height: 25px;
+    text-align: center;
+    width: 100px;
+}
+.blue{
+	background:#04b9ff;
+}
+.orenge{
+	background:#f39800;
+}
+.red{
+	background:#c490bf;
+}
+.guiy{
+	background:#d2d2d2;
+}
+.countTemp p{
+	display: block;
+    float: left;
+    margin-left: 10px;
+}
+.countTemp span{
+	display: block;
+    float: left;
+    text-align: center;
+    width: 55px;
+    color:#a40000;
+}
+.countContent ul li{
+	display:block;
+	width:80px;
+	height:80px;
+	float:left;
+	margin-left: 20px;
+    margin-top: 20px;
+}
+.countContent ul li span{
+	display: block;
+    float: left;
+    margin-top: 10px;
+    text-align: center;
+    width: 80px;
+    cursor: pointer;
+}
+.img1:hover{
+	background: url("img/billtk.png") no-repeat scroll 0 0 #12629b;
+}
+.img2:hover{
+	background: url("img/billhc.png") no-repeat scroll 0 0 #12629b;
+}
+.img3:hover{
+	background: url("img/billbuy.png") no-repeat scroll 0 0 #12629b;
+}
+.img4:hover{
+	background: url("img/billmanegae.png") no-repeat scroll 0 0 #12629b;
+}
+.img1{
+	background: url("img/billtk.png") no-repeat scroll 0 0 #2894c1;
+    border-radius: 3px;
+    float: left;
+    height: 50px;
+    width: 50px;
+    margin-left: 16px;
+    cursor: pointer;
+}
+.img2{
+	cursor: pointer;
+	margin-left: 16px;
+	border-radius: 3px;
+    float: left;
+    height: 50px;
+    width: 50px;
+	background:url("img/billhc.png") no-repeat scroll 0 0 #2894c1;
+}
+.img3{
+	cursor: pointer;
+	margin-left: 16px;
+	border-radius: 3px;
+    float: left;
+    height: 50px;
+    width: 50px;
+	background:url("img/billbuy.png") no-repeat scroll 0 0 #2894c1;
+}.img4{
+	cursor: pointer;
+	margin-left: 16px;
+	border-radius: 3px;
+    float: left;
+    height: 50px;
+    width: 50px;
+	background:url("img/billmanegae.png") no-repeat scroll 0 0 #2894c1;
+}
+.toolBox{
+	width:96%;
+	float:left;
+	margin-left:20px;
+	margin-top:20px;
+	border-left: 1px solid #ededed;
+}
+/*部分申报首页*/
+.reportDate{
+	float:left;
+	width:100%;
+	height:30px;
+	line-height:30px;
+	margin-top: 10px;
+}
+.reportDate label{
+	float:left;
+	display: block;
+    margin-left: 32px;
+    width: 130px;
+}
+.reportDate ul li{
+	background: #c9e3ff;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 4px;
+    text-align: center;
+    width: 20px;
+}
+.countrepTemp{
+	width:244px;
+    height:25px;
+    float: left;
+    line-height:25px;
+    margin-left:30px;
+    margin-top: 10px;
+}
+.countrepTemp p{
+	display: block;
+    float: left;
+    margin-left: 10px;
+}
+.countrepTemp span{
+	display: block;
+    float: left;
+    text-align: center;
+    width: 55px;
+    color:#a40000;
+}
+.reportOver{
+	float: left;
+    height: 72px;
+    width: 152px;
+}
+.reportOver label{
+	display: block;
+    margin-left: 32px;
+    margin-top: 27px;
+}
+/*发票查询*/
+.billSeachBox{
+	float:left;
+	width:100%;
+	background: #fff;
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
+.billSeachBox table{
+	width:100%;
+	font-size: 12px;
+}
+.billSeachBox table tr{
+	height:30px;
+}
+.billSeachBox table tr span{
+	color:#12629b;
+}
+.billSeachBox table tr td{
+	border:none;
+}
+.billSeachBox table tr label{
+	display:block;
+	float: left;
+	width:150px;
+	padding-left:20px;
+}
+.billSeachBox table tr input{
+	height:21px;
+	width:150px;
+	border:1px solid #d2d2d2;
+}
+.billSeachBox table tr select{
+	height:21px;
+	width:150px;
+	border:1px solid #d2d2d2;
+}
+.billSeachBox table tr textarea{
+	height:80px;
+	width: 450px;
+	border:1px solid #d2d2d2;
+}
+.inoContentBox{
+	width:100%;
+	min-height:200px;
+	background:#fff;
+	float: left;
+}
+.inoBtnBox{
+	float: left;
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+}
+.inoBtnBox span{
+	color: #f39800;
+    font-weight: bold;
+    padding-left: 20px;
+    cursor: pointer;
+}
+.inoBtn{
+	margin: 0 auto;
+	width:100px;
+	height:25px;
+	line-height:25px;
+}
+.compuImg{
+    border-radius: 5px;
+    float: left;
+    height: 90px;
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 350px;
+}
+.nocompuImg{
+	background: #f9f9f9;
+	border-bottom:1px solid #90918b;
+    border-top:1px solid #dbdbdb;
+    border-left:1px solid #dbdbdb;
+    border-right:1px solid #dbdbdb;
+}
+.compuActiv{
+	background: #f4f9fd;
+	border-bottom:1px solid #95bcdd;
+    border-top:1px solid #dde1e4;
+    border-left:1px solid #dde1e4;
+    border-right:1px solid #dde1e4;
+}
+.compuImg img{
+	float: left;
+    margin-left: 10px;
+    margin-top: 16px;
+}
+.compuImg span p{
+	color: #999;
+}
+.compuImg span{
+	width:250px;
+	float:left;
+	height:27px;
+	line-height:27px;
+	margin-left: 20px;
+}
+.compuImg div{
+	color: #999;
+    display: block;
+    float: left;
+    font-weight: bold;
+    padding-left: 0;
+    width: 80px;
+}
+.compuImg .activeT{
+	color:#12629b
+}
+.compuImg span b{
+	color:#f39800;
+	margin-left: 20px;
+}
+.compuImg .newMage{
+	margin-bottom:0px;
+	margin-left: 278px;
+    position: absolute;
+	height:74px;
+	width:73px;
+	background:url("img/new.png");
+}
+.printLeft{
+	width:35%;
+	float:left;
+}
+.printRight{
+	width:65%;
+	float:left;
+}
+.printHeiht{
+	margin-top: 10px;
+	width:100%;
+	height:30px;
+	line-height:30px;
+}
+.printHeiht span{
+	display: block;
+    float: left;
+    width: 150px;
+    margin-left: 20px;
+}
+.printHeiht span p{
+	display: block;
+    margin-left: 35px;
+}
+.printHeiht div label{
+	display: block;
+    float: left;
+    margin-left: 6px;
+    width: 100px;
+}
+.printHeiht div {
+	margin-left:20px;
+}
+.printHeiht select{
+	border: 1px solid #d2d2d2;
+    float: left;
+    height: 21px;
+    width: 150px;
+    margin-top: 5px;
+}
+.printHeiht span .radio{
+	display: block;
+    float: left;
+    margin-top: 9px;
+}
+.doPrint{
+	margin: 20px auto 0;
+	width:300px;
+	height:200px;
+	border:3px solid #d5e5f2;
+}
+.doPrintTop{
+	width:100%;
+	height:25px;
+	background:#d5e5f2;
+}
+.doPrintTop span{
+	line-height:25px;
+	padding-left:20px;
+	font-weight: bold;
+	color:#12629b;
+}
+.printeditHeiht{
+	margin-top: 13px;
+	width:100%;
+	height:30px;
+	line-height:30px;
+}
+.printeditHeiht label{
+	display: block;
+    float: left;
+    margin-left: 20px;
+    width: 60px;
+}
+.printeditHeiht input{
+	border: 1px solid #d2d2d2;
+    float: left;
+    height: 21px;
+    width: 150px;
+    margin-top: 5px;
+}
+.printeditHeiht p{
+	display: block;
+    float: left;
+    margin-left: 10px;
+    width: 30px;
+}
+.printHeiht .getdata{
+	margin: 0 auto;
+    width: 167px;
+}
+.printHeiht .getdata b{
+	color:#f39800;
+	cursor: pointer;
+	padding-left:10px;
+}
+.printHeiht .printBtn{
+	height:25px;
+	line-height:25px;
+	width:120px;
+	float:left;
+}
+.printHeiht .midprint{
+	height: 25px;
+    margin: 0 auto;
+    width: 265px;
+}
+.titBox{
+	width:350px;
+	height: 74px;
+	margin:0 auto;
+	border:1px solid #fab651;
+	background:#fef6eb;
+	margin-top:20px;
+}
+.titBox p{
+	color: #f8a475;
+    font-weight: bold;
+    padding: 10px;
+}
+.printRightImg{
+	height:auto;
+	max-width:650px;
+	margin:0 auto;
+	margin-top:20px;
+}
+.printRightImg img{
+	max-width:650px;
+}
+.billgrey{
+	color: #999;
+}
+.billred{
+	color: #eb6100;
+}
+.billblue{
+	color: #00a0e9;
+}
+.overflowEllipsis{
+	white-space: nowrap;
+	width:200px;
+	height:25px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	display:block;
+	padding-left:10px;
+	padding-right:10px;
+}
+.datatadBox{
+	float: left;
+    height: 35px;
+    line-height: 35px;
+    width: 80px;
+}
+.datatadBox p{
+	padding-left:10px;
+	color:#12629b;
+}
+.inputBox{
+	float: left;
+    
+	height: 30px;
+    
+	line-height: 30px;
+    width: 155px;
+}
+.inputBox p{
+	padding-left:10px;
+	color:#12629b;
+}
+
+.btn02{
+	width: 85px;
+	height: 28px;
+	line-height: 28px;
+	font-size: 14px;
+	letter-spacing: 1px;
+	color:#fff;
+	cursor: pointer;
+	background: url(../indeximg/btn1.png) no-repeat;	
+	border: none;
+	
+}
+.btn03{
+	width: 92px;
+	height: 28px;
+	line-height: 28px;
+	font-size: 15px;
+	letter-spacing: 3px;
+	border: none;
+    color: #fff;
+    background-color: #74b1ee;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.commtr{
+		background-color: #74b1ee;
+		font-size: 16px;
+		font-style:inherit;
+		text-decoration: inherit;
+		line-height: 20px;
+		height: 28px;
+		color: #fff;
+		letter-spacing: 3px;
+		font-weight: bold;
+}
+.sbaction{
+	color: #666; 
+	font-weight: normal;
+	width: 65px;
+	height: 25px;
+	font-size: 12px;
+	line-height: 23px;
+	text-indent: 0px;
+	text-align: center;
+	color: #fff;
+	cursor: pointer;
+	background: url(../images/btnsmall1.png) no-repeat;	
+	border: none;
+	padding: 0;
+	letter-spacing: 0;
+}
+.font{
+	color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 12px;
+    padding-left: 20px;
+    text-align: center;
+    line-height: 27px;
+}
+/*发票*/
+.bodyBox{
+	height:100%;
+}
+.billBox{
+	height: auto;
+	position: absolute;
+    
+	left: 16px;
+    
+	/* margin-top: 16px; */
+    min-width: 1000px;
+    width: 96%;
+    margin-bottom:50px;
+	border: 1px solid #ECECEC;
+}
+.navigation{
+	background:#fff;
+	border: 1px solid #d4d4d4;
+    box-shadow: 0 2px 2px #ccc;
+    height: 25px;
+    width: 100%;
+	}
+.navigation ul{
+	display:block;
+	height: 25px;
+	width: 100%;
+	float:left;
+}
+.navigationList{
+	border-bottom: 4px solid #555;
+    display: block;
+    float: left;
+    height: 17px;
+    margin-left: 20px;
+    margin-top: 1px;
+    text-align: center;
+    width: 100px;
+    cursor: pointer;
+}
+.navSelect{
+	cursor: pointer;
+	display: block;
+    float: left;
+    height: 17px;
+    margin-left: 20px;
+    margin-top: 1px;
+    text-align: center;
+    width: 100px;
+	color:#f39800;
+	border-bottom:4px solid #f39800;
+}
+.billInfoBox{
+	float:left;
+	width:100%;
+	margin-top:15px;
+	/* background:#fff; */
+	/* border:1px solid #d6d6d6; */
+}
+.billContentBox{
+	float:left;
+	width: 97%;
+	margin-bottom:20px;
+	margin-top: 16px;
+	margin-left: 16px;
+	/* background:#fff; */
+	border:1px solid #d6d6d6;
+}
+.eveTitle{
+	float:left;
+	width:100%;
+	height:25px;
+	background: #fff;
+}
+.eveTitle span{
+	display: block;
+    font-weight: bold;
+    height: 25px;
+    line-height: 25px;
+    margin-left: 20px;
+}
+.evetable{
+	float: left;
+   	width: 100%;
+}
+.evetable table{
+	background:#fbfbfb;
+	font-size:12px;
+	border-top: 1px solid #ededed;
+	border-left:1px solid #ededed;
+   	width: 100%;
+   	
+}
+.evetable table tr td{
+	height: 25px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.evetable table tr td{
+	border-bottom: 1px solid #ededed;
+	border-right: 1px solid #ededed;
+}
+.evetable table tr td span{
+	line-height:21px;
+	margin-left: 10px;
+}
+.evetable table tr td input{
+	display: block;
+    float: left;
+    margin-left: 15px;
+    margin-top: 4px;
+}
+.eveBtnBox{
+	float: left;
+    height: 40px;
+    width: 100%;
+}
+.eveBtn{
+	height: 25px;
+    margin-left: 39px;
+    margin-top:8px;
+    width: 80px;
+    line-height: 25px;
+}
+.evedianziBtn{
+	height: 25px;
+    margin-left: 20px;
+    margin-top:8px;
+    width: 80px;
+    line-height: 25px;
+}
+.nameWid table tr td span{
+	display: block;
+    float: left;
+    width: 150px;
+}
+.eveaddresstit {
+    border-top: 3px solid #F59702;
+    float: left;
+    font-weight: bold;
+    height: 25px;
+    line-height: 25px;
+    width: 100%;
+    cursor: pointer;
+    background-color: #FFFEEA;
+}
+
+.seacheveBox{
+	color: #FFF;
+	cursor: pointer;
+	height: 25px;
+	letter-spacing: 2px;
+	line-height: 25px;
+	margin-left: 47%;
+	text-align: center;
+	width: 100px;
+	background-color: #F59702;
+}
+.seacheveBox span{
+	float:left;
+}
+.imgBtn{
+	float: left;
+	height:25px;
+	width:25px;
+	background:url("img/img_up.png");
+	
+}
+.imgBtnup{
+	float: left;
+	height:25px;
+	width:25px;
+	background:url("img/img-doan.png");
+
+}
+.checkBox{
+	float: left;
+	 height: 35px;
+	 line-height: 35px;
+	 margin-left: 10px;
+	 width: 130px;
+}
+.checkBox input{
+	margin-top: -1px;
+}
+.checkBox span{
+	margin-left: 10px;
+}
+#eveSort label{
+	display: block;
+    float: left;
+    font-weight: bold;
+    line-height: 40px;
+    margin-left: 15px;
+    width: 70px;
+}
+#eveSort input{
+	display: block;
+    float: left;
+    height: 25px;
+    margin-left: 10px;
+    margin-top: 7px;
+}
+
+.evetable table thead tr th{
+	border-right:1px solid #ededed;
+	text-align: center;
+}
+.evetable table thead tr{
+	height:25px;
+	background:#ecf5ff;
+	background:-moz-linear-gradient(center top , #fff, #f2f2f2) repeat scroll 0 0 rgba(0, 0, 0, 0);
+	border-bottom: 1px solid #d6d6d6;
+    border-top: 1px solid #d6d6d6;
+}
+.evetable table tbody{
+	border-bottom: 1px solid #d6d6d6;
+}
+.evetable table tbody td{
+	text-overflow: ellipsis;
+}
+.pageBox{
+	background: #fff;
+    color: #f39800;
+    float: left;
+    height: 27px;
+    line-height: 27px;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+}
+.evetable input.billText{
+    margin-left: 0px;
+    margin-top: -1px;
+    height:20px;
+    width:100px;
+    border:1px solid #d2d2d2;
+    color: #777;
+    font-size: 12px;
+    text-align: center;
+}
+.evetable select.billText{
+    margin-left: 0px;
+    margin-top: -1px;
+    height:20px;
+    width:100px;
+    border:1px solid #d2d2d2;
+    color: #777;
+    font-size: 12px;
+    text-align: center;
+}
+.billText{
+	border: 1px solid #d2d2d2;
+    color: #777;
+    font-size: 12px;
+    height: 20px;
+    margin-left: 0;
+    margin-top: -1px;
+    width: 100px;
+    /*width: 99%;*/
+    text-align: center;
+}
+select.billText{
+	width: 100px!important;
+}
+/*申报*/
+.invoicemidBox{
+	height:100%;
+	position: absolute;
+    left: 28px;
+    margin-top: 20px;
+    min-width: 1100px;
+    width: 96%;
+}
+.invoiceInfo{
+	height:105px;
+	float:left;
+	width:100%;
+}
+.invoiceleft{
+	height:100px;
+	float:left;
+	width:49%;
+	background:#fbfbfb;
+	border:2px solid #f2f2f2;
+}
+.invoiceright{
+	height:102px;
+	float:right;
+	width:49%;
+	background:#188ecc;
+}
+.declareInfo{
+	height: 30px;
+    
+    
+	width: 1000px;
+}
+.MIdCont{
+}
+.declareInfo label{
+	float: left;
+    line-height: 35px;
+    text-align: center;
+    width: 33px;
+}
+.declareInfo span{
+	display: block;
+    float: left;
+    
+	line-height: 30px;
+    width: 100px;
+    
+	margin-left: 28px;
+}
+.declareInfo input{
+	border: 1px solid #c1c1c1;
+    display: block;
+    float: left;
+    height: 21px;
+    width: 150px;
+    margin-top: 8px;
+}
+.declareBtnBox{
+	float: left;
+    width: 100%;
+	font-size: 14px;
+	background-color: #FFFEEA;
+}
+.declareTop{
+	/* background: #f9f9f9; */
+    float: left;
+    min-height: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: 100%;  
+}
+.decFontTop{
+	color: #12629b;
+    font-size: 15px;
+    font-weight: bold;
+}
+.littleTop{
+	height: 20px;
+    line-height: 20px;
+    width: 100%;
+}
+.declareTop span{
+	display:block;
+	min-height:25px;
+	width:98%;
+	margin-left:1%;
+	border-top:1px solid #dfdfdf;
+}
+.topuseInfo{
+	height:25px;
+	line-height:25px;
+	width:100%;
+}
+.topuseInfo p{
+	text-align: left;
+	float: left;
+	padding-left:20px;
+}
+.topuseInfo label{
+	text-align: right;
+	float: right;
+	padding-right:20px;
+}
+.decTabs{
+	background: #ececec;
+    
+	border-bottom: none;
+    
+	border: none;
+	float: left;
+    
+	height: 30px;
+    width: 100%;
+}
+.decTabsBtn{
+	cursor: pointer;
+	border-left: 1px solid #e2f6ff;
+	border-right: 1px solid #7ecef4;
+    float: left;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    width: 165px;
+}
+.decTabsSelect{
+	cursor: pointer;
+    
+	border-left: none;
+    
+	border-right: none;
+    
+	border-top: none;
+    
+	color: #333;
+    font-weight: bold;
+    
+	float: none;
+    
+	margin: 0 auto;
+	height: 30px;
+    
+	line-height: 30px;
+    text-align: center;
+    width: 165px;
+	font-size: 14px;
+	background-color: #ececec;
+}
+.decContent{
+	float:left;
+	width:100%!important;
+	/*min-height:400px;*/
+	background: #fff;
+}
+.decContentTable{
+	
+	float: left;
+    margin-left: 1.3%;
+    margin-top: 15px;
+    width: 48%;
+    border-right:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    border-left:1px solid #ccc;
+}
+.decContentTable table{
+	/* width: 100%; */
+	font-size: 12px;
+}
+.decContentTable table tr th,.decContentTable table tr td{
+	border-right:1px solid #ededed;
+	border-bottom:1px solid #ededed;
+	height: 30px;
+}
+.decContentTable table tr td{
+	text-align: center;
+}
+.decContentTable table tr th{
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	background:#fff;
+	background: -moz-linear-gradient(center top , #fff, #f2f2f2) repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.decAloneContentTable table{
+	width: 100%;
+	font-size: 12px;
+}
+.decAloneContentTable tr th,.decAloneContentTable tr td{
+	border-right:1px solid #ededed;
+	border-bottom:1px solid #ededed;
+	height: 30px;
+}
+.decAloneContentTable tr td{
+	text-align: center;
+}
+.decAloneContentTable tr th{
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	background: #fff;
+	background: -moz-linear-gradient(center top , #fff, #f2f2f2) repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+.decAloneContentTable {
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    float: left;
+    margin-left: 0.9%;
+    margin-top: 15px;
+   
+    width: 98%;
+}
+.decSave{
+	width: 335px;
+	float:left;
+	height: 65px;
+	background:#f9f9f9;
+	margin-left: -168px;
+	position: relative;
+	left: 50%;
+}
+ .decBtn {
+    display: block;
+    height: 28px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-top: 0;
+    width: 85px;
+ } 
+/*发票首页*/
+.invoiceright img{
+	height:100px;
+	display: block;
+    float: right;
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    z-index: 0;
+}
+.openInvoce{
+	height:30px;
+	width:400px;
+	z-index:100;
+	position: absolute;
+}
+.withBtn{
+	background:#fff;
+    border: medium none;
+    border-radius: 3px;
+    color: #12629b;
+    float: left;
+    font-weight: bold;
+    height: 30px;
+    margin-left: 40px;
+    margin-top: 22px;
+    width: 133px;
+    cursor: pointer;
+}
+.withBtn:hover{
+	background:#7ecef4;
+	color:#fff;
+}
+.invoiceleftimg{
+	height:100px;
+	width:100px;
+	float:left;
+}
+.invoiceleftimg img{
+	margin-left: 20px;
+    margin-top: 10px;
+}
+.invoiceleftimg span{
+	display: block;
+    float: left;
+    height: 15px;
+    margin-top: 6px;
+    text-align: center;
+    width: 100px;
+}
+.invoiceleftimg span p{
+	color: #12629b;
+    float: left;
+    font-weight: bold;
+    padding-left: 15px;
+}
+.invItemBox{
+	width:250px;
+	float:left;
+	margin-left: 40px;
+	margin-top: 10px;
+}
+.invItem{
+	height:25px;
+	line-height:25px;
+	width:250px;
+	float:left;
+}
+.invItem label{
+	color: #12629b;
+    display: block;
+    float: left;
+    width: 95px;
+}
+.countBox{
+	float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+.countTop{
+	float: left;
+    height: 25px;
+    width: 100%;
+}
+.countTop span{
+	background:#fbfbfb;
+    border: 2px solid #f2f2f2;
+    border-bottom:none;
+    display: block;
+    float: left;
+    font-weight: bold;
+    line-height: 25px;
+    padding-left: 20px;
+    width: 154px;
+}
+.countContent{
+	background:#fbfbfb;
+    border: 2px solid #f2f2f2;
+    width:100%;
+    padding-bottom: 15px;
+    float: left;
+}
+.countTemp{
+	width:300px;
+    height:25px;
+    float: left;
+    line-height:25px;
+    margin-left:30px;
+    margin-top: 20px;
+}
+.counBj{
+	color: #fff;
+    float: left;
+    height: 25px;
+    text-align: center;
+    width: 100px;
+}
+.blue{
+	background:#04b9ff;
+}
+.orenge{
+	background:#f39800;
+}
+.red{
+	background:#c490bf;
+}
+.guiy{
+	background:#d2d2d2;
+}
+.countTemp p{
+	display: block;
+    float: left;
+    margin-left: 10px;
+}
+.countTemp span{
+	display: block;
+    float: left;
+    text-align: center;
+    width: 55px;
+    color:#a40000;
+}
+.countContent ul li{
+	display:block;
+	width:80px;
+	height:80px;
+	float:left;
+	margin-left: 20px;
+    margin-top: 20px;
+}
+.countContent ul li span{
+	display: block;
+    float: left;
+    margin-top: 10px;
+    text-align: center;
+    width: 80px;
+    cursor: pointer;
+}
+.img1:hover{
+	background: url("img/billtk.png") no-repeat scroll 0 0 #12629b;
+}
+.img2:hover{
+	background: url("img/billhc.png") no-repeat scroll 0 0 #12629b;
+}
+.img3:hover{
+	background: url("img/billbuy.png") no-repeat scroll 0 0 #12629b;
+}
+.img4:hover{
+	background: url("img/billmanegae.png") no-repeat scroll 0 0 #12629b;
+}
+.img1{
+	background: url("img/billtk.png") no-repeat scroll 0 0 #2894c1;
+    border-radius: 3px;
+    float: left;
+    height: 50px;
+    width: 50px;
+    margin-left: 16px;
+    cursor: pointer;
+}
+.img2{
+	cursor: pointer;
+	margin-left: 16px;
+	border-radius: 3px;
+    float: left;
+    height: 50px;
+    width: 50px;
+	background:url("img/billhc.png") no-repeat scroll 0 0 #2894c1;
+}
+.img3{
+	cursor: pointer;
+	margin-left: 16px;
+	border-radius: 3px;
+    float: left;
+    height: 50px;
+    width: 50px;
+	background:url("img/billbuy.png") no-repeat scroll 0 0 #2894c1;
+}.img4{
+	cursor: pointer;
+	margin-left: 16px;
+	border-radius: 3px;
+    float: left;
+    height: 50px;
+    width: 50px;
+	background:url("img/billmanegae.png") no-repeat scroll 0 0 #2894c1;
+}
+.toolBox{
+	width:96%;
+	float:left;
+	margin-left:20px;
+	margin-top:20px;
+	border-left: 1px solid #ededed;
+}
+/*部分申报首页*/
+.reportDate{
+	float:left;
+	width:100%;
+	height:30px;
+	line-height:30px;
+	margin-top: 10px;
+}
+.reportDate label{
+	float:left;
+	display: block;
+    margin-left: 32px;
+    width: 130px;
+}
+.reportDate ul li{
+	background: #c9e3ff;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 4px;
+    text-align: center;
+    width: 20px;
+}
+.countrepTemp{
+	width:244px;
+    height:25px;
+    float: left;
+    line-height:25px;
+    margin-left:30px;
+    margin-top: 10px;
+}
+.countrepTemp p{
+	display: block;
+    float: left;
+    margin-left: 10px;
+}
+.countrepTemp span{
+	display: block;
+    float: left;
+    text-align: center;
+    width: 55px;
+    color:#a40000;
+}
+.reportOver{
+	float: left;
+    height: 72px;
+    width: 152px;
+}
+.reportOver label{
+	display: block;
+    margin-left: 32px;
+    margin-top: 27px;
+}
+/*发票查询*/
+.billSeachBox{
+	float:left;
+	width:100%;
+	background: #fff;
+	padding-top: 10px;
+	padding-bottom: 15px;
+}
+.billSeachBox table{
+	width:100%;
+	font-size: 12px;
+}
+.billSeachBox table tr{
+	height:30px;
+}
+.billSeachBox table tr span{
+	color:#12629b;
+}
+.billSeachBox table tr td{
+	border:none;
+}
+.billSeachBox table tr label{
+	display:block;
+	float: left;
+	width:150px;
+	padding-left:20px;
+}
+.billSeachBox table tr input{
+	height:21px;
+	width:150px;
+	border:1px solid #d2d2d2;
+}
+.billSeachBox table tr select{
+	height:21px;
+	width:150px;
+	border:1px solid #d2d2d2;
+}
+.billSeachBox table tr textarea{
+	height:80px;
+	width: 450px;
+	border:1px solid #d2d2d2;
+}
+.inoContentBox{
+	width:100%;
+	min-height:200px;
+	background:#fff;
+	float: left;
+}
+.inoBtnBox{
+	float: left;
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+}
+.inoBtnBox span{
+	color: #f39800;
+    font-weight: bold;
+    padding-left: 20px;
+    cursor: pointer;
+}
+.inoBtn{
+	margin: 0 auto;
+	width:100px;
+	height:25px;
+	line-height:25px;
+}
+.compuImg{
+    border-radius: 5px;
+    float: left;
+    height: 90px;
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 350px;
+}
+.nocompuImg{
+	background: #f9f9f9;
+	border-bottom:1px solid #90918b;
+    border-top:1px solid #dbdbdb;
+    border-left:1px solid #dbdbdb;
+    border-right:1px solid #dbdbdb;
+}
+.compuActiv{
+	background: #f4f9fd;
+	border-bottom:1px solid #95bcdd;
+    border-top:1px solid #dde1e4;
+    border-left:1px solid #dde1e4;
+    border-right:1px solid #dde1e4;
+}
+.compuImg img{
+	float: left;
+    margin-left: 10px;
+    margin-top: 16px;
+}
+.compuImg span p{
+	color: #999;
+}
+.compuImg span{
+	width:250px;
+	float:left;
+	height:27px;
+	line-height:27px;
+	margin-left: 20px;
+}
+.compuImg div{
+	color: #999;
+    display: block;
+    float: left;
+    font-weight: bold;
+    padding-left: 0;
+    width: 80px;
+}
+.compuImg .activeT{
+	color:#12629b
+}
+.compuImg span b{
+	color:#f39800;
+	margin-left: 20px;
+}
+.compuImg .newMage{
+	margin-bottom:0px;
+	margin-left: 278px;
+    position: absolute;
+	height:74px;
+	width:73px;
+	background:url("img/new.png");
+}
+.printLeft{
+	width:35%;
+	float:left;
+}
+.printRight{
+	width:65%;
+	float:left;
+}
+.printHeiht{
+	margin-top: 10px;
+	width:100%;
+	height:30px;
+	line-height:30px;
+}
+.printHeiht span{
+	display: block;
+    float: left;
+    width: 150px;
+    margin-left: 20px;
+}
+.printHeiht span p{
+	display: block;
+    margin-left: 35px;
+}
+.printHeiht div label{
+	display: block;
+    float: left;
+    margin-left: 6px;
+    width: 100px;
+}
+.printHeiht div {
+	margin-left:20px;
+}
+.printHeiht select{
+	border: 1px solid #d2d2d2;
+    float: left;
+    height: 21px;
+    width: 150px;
+    margin-top: 5px;
+}
+.printHeiht span .radio{
+	display: block;
+    float: left;
+    margin-top: 9px;
+}
+.doPrint{
+	margin: 20px auto 0;
+	width:300px;
+	height:200px;
+	border:3px solid #d5e5f2;
+}
+.doPrintTop{
+	width:100%;
+	height:25px;
+	background:#d5e5f2;
+}
+.doPrintTop span{
+	line-height:25px;
+	padding-left:20px;
+	font-weight: bold;
+	color:#12629b;
+}
+.printeditHeiht{
+	margin-top: 13px;
+	width:100%;
+	height:30px;
+	line-height:30px;
+}
+.printeditHeiht label{
+	display: block;
+    float: left;
+    margin-left: 20px;
+    width: 60px;
+}
+.printeditHeiht input{
+	border: 1px solid #d2d2d2;
+    float: left;
+    height: 21px;
+    width: 150px;
+    margin-top: 5px;
+}
+.printeditHeiht p{
+	display: block;
+    float: left;
+    margin-left: 10px;
+    width: 30px;
+}
+.printHeiht .getdata{
+	margin: 0 auto;
+    width: 167px;
+}
+.printHeiht .getdata b{
+	color:#f39800;
+	cursor: pointer;
+	padding-left:10px;
+}
+.printHeiht .printBtn{
+	height:25px;
+	line-height:25px;
+	width:120px;
+	float:left;
+}
+.printHeiht .midprint{
+	height: 25px;
+    margin: 0 auto;
+    width: 265px;
+}
+.titBox{
+	width:350px;
+	height: 74px;
+	margin:0 auto;
+	border:1px solid #fab651;
+	background:#fef6eb;
+	margin-top:20px;
+}
+.titBox p{
+	color: #f8a475;
+    font-weight: bold;
+    padding: 10px;
+}
+.printRightImg{
+	height:auto;
+	max-width:650px;
+	margin:0 auto;
+	margin-top:20px;
+}
+.printRightImg img{
+	max-width:650px;
+}
+.billgrey{
+	color: #999;
+}
+.billred{
+	color: #eb6100;
+}
+.billblue{
+	color: #00a0e9;
+}
+.overflowEllipsis{
+	white-space: nowrap;
+	width:200px;
+	height:25px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	display:block;
+	padding-left:10px;
+	padding-right:10px;
+}
+.datatadBox{
+	float: left;
+    height: 35px;
+    line-height: 35px;
+    width: 80px;
+}
+.datatadBox p{
+	padding-left:10px;
+	color:#12629b;
+}
+.inputBox{
+	float: left;
+    
+	height: 30px;
+    
+	line-height: 30px;
+    width: 155px;
+}
+.inputBox p{
+	padding-left:10px;
+	color: #666;
+}
+
+.btn02{
+	width: 85px;
+	height: 30px;
+	line-height: 28px;
+	font-size: 14px;
+	letter-spacing: 1px;
+	color:#fff;
+	cursor: pointer;
+	background: url(../indeximg/btn1.png) no-repeat;	
+	border: none;
+}
+/*系统管理*/
+#zongjigou {
+	margin: 16px ;
+	font-size: 14px;
+}
+#dlg .buttonBox{
+    font-size: 12px;
+    width: 85px!important;
+    letter-spacing: 0px;
+}
+.search-input {
+	height: 22px;
+	line-height: 22px;
+	width: 150px;
+	border: 1px solid #cdcdcd;
+	color: #555;
+	margin-right: 15px;
+	text-indent: 5px;
+	font-family: "Microsoft Yahei";
+}
+.toolbardiv span.item{
+	margin-left: 2%;
+}
+.toolbardiv span.item .search-input{
+	margin-left: 5px;
+}
+.toolbardiv span.item label{
+	display: inline-block;
+	text-align: right;
+	margin-top: 9px;
+}

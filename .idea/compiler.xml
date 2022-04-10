@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="core" />
+        <module name="IntfServer-jj" />
+        <module name="IntfServer-ld" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="core" target="1.7" />
+      <module name="ERPIntf" target="1.5" />
+      <module name="IntfServer" target="1.5" />
+      <module name="IntfServer-cg" target="1.7" />
+      <module name="IntfServer-dk" target="1.7" />
+      <module name="IntfServer-dwk" target="1.7" />
+      <module name="IntfServer-fc" target="1.7" />
+      <module name="IntfServer-jj" target="1.7" />
+      <module name="IntfServer-kc" target="1.7" />
+      <module name="IntfServer-ld" target="1.7" />
+      <module name="IntfServer-qz" target="1.7" />
+      <module name="IntfServer-zj" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

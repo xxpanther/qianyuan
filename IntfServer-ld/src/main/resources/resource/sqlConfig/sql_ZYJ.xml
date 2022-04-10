@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<sqlConfig>
+    <sql id="getZyjState">
+        <![CDATA[
+                SELECT TOP 50  'ZY'+MachineCode deviceCode, SamReady deviceStatus FROM zy_status_tb
+        ]]>
+    </sql>
+
+    <sql id="getZyjSubDeviceState">
+        <![CDATA[
+                select TOP 50  'ZY'+machineCode+deviceCode deviceCode, deviceName, deviceStatus, sampleID from zy_state_tb
+        ]]>
+    </sql>
+
+    <sql id="getZyjError">
+        <![CDATA[
+                SELECT TOP 50 machineCode, errorCode, CONVERT(varchar(100), errorTime, 20) errorTime, errorDec FROM zy_err_Tb where dataStatus = 0
+        ]]>
+    </sql>
+
+    <sql id="writeBackZyjError">
+        <![CDATA[
+                update zy_err_Tb set dataStatus = 1 where dataStatus = 0 and machineCode = ? and errorCode = ?
+        ]]>
+    </sql>
+
+    <sql id="getZyjRecord">
+        <![CDATA[
+                SELECT TOP 50 machineCode, sampleId, packCode, sampleType, zyType, zyWeight,size,water, CONVERT(varchar(100), startTime, 20) startTime, CONVERT(varchar(100), endTime, 20) endTime,sampleWeight, userName  FROM ZY_record_Tb where dataStatus = 0
+        ]]>
+    </sql>
+
+    <sql id="writeBackZyjRecord">
+        <![CDATA[
+                update ZY_record_Tb set dataStatus = 1 where dataStatus = 0 and machineCode = ? and sampleId = ?
+        ]]>
+    </sql>
+</sqlConfig>

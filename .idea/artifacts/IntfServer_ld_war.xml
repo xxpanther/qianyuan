@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="IntfServer-ld:war">
+    <output-path>$PROJECT_DIR$/IntfServer-ld/target</output-path>
+    <root id="archive" name="erpintf.war">
+      <element id="artifact" artifact-name="IntfServer-ld:war exploded" />
+    </root>
+  </artifact>
+</component>

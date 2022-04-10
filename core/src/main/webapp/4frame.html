@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<!-- saved from url=(0278)https://etax.jiangsu.chinatax.gov.cn/shenbao/index.action?sign=index&app_type=1&sb_type=1&zsxm_dm=10101&menu_show_type=0&nsrdzdah=10113211000169915694&new_dlm=913211915524848086&username=913211915524848086&djxh=10113211000051460909&sssq_z=2020-06-30&sssq_q=2020-06-01&yrdbz=must -->
+<html class="panel-fit"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+<title>网络电子税局</title>
+
+<link rel="stylesheet" type="text/css" href="css/easyui(1).css">
+<link rel="stylesheet" type="text/css" href="css/icon.css">
+<link rel="stylesheet" type="text/css" href="css/global.css">
+<link rel="stylesheet" type="text/css" href="css/smartMenu(1).css">
+<link rel="stylesheet" type="text/css" href="css/sbbase.css">
+<link href="css/layer(1).css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.easyui.min(1).js"></script>
+<script type="text/javascript" src="js/layer.min(1).js"></script>
+<link type="text/css" rel="stylesheet" href="css/layer(1).css" id="skinlayercss">
+<script type="text/javascript" src="js/layerHandler(1).js"></script>
+<script type="text/javascript" src="js/jquery-smartMenu-min.js"></script>
+<script type="text/javascript" src="js/ajaxPlugin.js"></script>
+<script type="text/javascript" src="js/etaxAjaxTool.js"></script>
+<script type="text/javascript" src="js/WdatePicker.js"></script>
+<link href="css/WdatePicker.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/sbDateUtilComm.js"></script>
+<link type="text/css" rel="stylesheet" href="css/base(1).css">
+<link href="css/loadbar.css" type="text/css" rel="stylesheet">
+
+<style type="text/css">
+.Wdate { /*datePicker 日历*/
+	background: #fff
+		url(https://etax.jiangsu.chinatax.gov.cn/shenbao/styles/default/images/datePicker.gif)
+		no-repeat right;
+}
+#advLink a{
+ font-weight:bold;
+ color:black;
+ text-decoration: none;
+ cursor: pointer;
+}
+#advLink a:hover{
+  text-decoration: underline;
+}
+
+#vLink a{
+ font-weight:bold;
+ color:black;
+ text-decoration: none;
+ cursor: pointer;
+}
+#vLink a:hover{
+  text-decoration: underline;
+}
+
+</style>
+<script type="text/javascript">
+	function resizewidth() {
+		var the_width = document.body.clientWidth;
+		var center_width = the_width - 455;
+		var flag = true;
+
+		$("#right_button").click(function() {
+			if (flag == true) {
+				var change_width = the_width - 210;
+				var change_width1 = the_width - 23;
+				$(".layout-panel-center").css("width", change_width);
+				$("#mainPanle").css("width", change_width);
+				$(".layout-panel-east").css({
+					"right" : "-245px",
+					"left" : change_width1
+				});
+			}
+			if (flag == false) {
+				var center_width1 = the_width - 455;
+				var center_width2 = the_width - 275;
+				$(".layout-panel-center").css("width", center_width1);
+				$("#mainPanle").css("width", center_width1);
+				$(".layout-panel-east").css({
+					"right" : "0",
+					"left" : center_width2
+				});
+				$(".mainbox .date .days span").css("margin-right", "4px");
+			}
+			if ($(".layout-panel-center").width() > center_width) {
+				flag = false;
+			} else {
+				flag = true;
+			}
+			;
+			$('#mainPanle').tabs('resize');
+		});
+	}
+	$(window).resize(function() {
+		resizewidth();
+		$("#mianPanle").tabs('resize');
+
+	});
+	/*右侧快捷菜单right*/
+	function rightCollapse() {
+		var flag1 = true;
+		$(".ftool p").on('click', function() {
+			if (flag1) {
+				$(this).parent().find("ul").slideToggle();
+				$(this).addClass("active");
+				flag1 = false;
+			} else {
+				$(this).parent().find("ul").slideToggle();
+				$(this).removeClass("active");
+				flag1 = true;
+			}
+			;
+		});
+		var flag2 = true;
+		$(".policy p dl").hide(); /*   border:1px dashed #999999;*/
+		$(".policy p").on('click', function() {
+			if (flag2) {
+				$(this).parent().find("dl").slideToggle();
+				$(this).addClass("active");
+				flag2 = false;
+			} else {
+				$(this).parent().find("dl").slideToggle();
+				$(this).removeClass("active");
+				flag2 = true;
+			}
+			;
+		});
+	}
+	$(document)
+			.ready(
+					function() {
+					    addEventForAdvise();
+						resizewidth();/*右侧快捷菜单点击*/
+						rightCollapse(); /*右侧快捷菜单折叠*/
+						var the_top = document.documentElement.clientHeight;
+						var wintop = the_top;
+						$("#mainPanle").css({
+							height : wintop
+						});
+						$("#left").css({
+							height : wintop
+						});
+
+						$("#mainPanle").tabs({
+							fit : true
+						});
+						var tree_menu = {
+
+							menus : [
+									{
+										title : "纳税申报",
+										icon : "icon-sb-1",
+										menus : [
+												{
+													title : "一般申报",
+													icon : "icon-itemblue",
+													url : "ybsbInitBaseAction.action?sbzl=10101&sb_type=1&zsxm_dm=10101"
+												}, {
+													title : "特殊申报",
+													icon : "icon-itemblue",
+													url : "developing.html"
+												} ]
+									},
+									{
+										title : "税款缴纳",
+										icon : "icon-sb-2",
+										menus : [ {
+											title : "完税凭证",
+											icon : "icon-itemblue",
+											url : "queryReportPayMoney.action?sign=queryReportPayMoneyJump"//完税凭证查询
+										} ]
+									},
+									{
+										title : "信息查询",
+										icon : "icon-sb-3",
+										menus : [
+												{
+													title : "申报查询",
+													icon : "icon-itemblue",
+													url : "sbcxAction.action?sign=index"
+												},
+												{
+													title : "进出口报表XML导入",
+													icon : "icon-itemblue",
+													url : "indexMenuJump.action?sign=outinReportXMLImport"//developing.html
+												} ]
+									} ]
+						};
+						f_menu_initial(tree_menu);
+						addTabs(
+								"主 页",
+								"main.html");
+
+						$(".easyui-accordion li a")
+								.click(
+										function() {
+											var atitle = $(this).html();
+											var src = $(this).attr("src");
+											$(".easyui-accordion li a")
+													.removeClass("selected");
+											$(this).addClass("selected");
+											addTabs($(this).html(), $(this)
+													.attr("src"));
+										});
+
+						$("#mainPanle").tabs({
+							onSelect : function(title, index) {
+								selectAtitle(title);
+							}
+						});
+						$("#right_button").trigger("click");
+
+					});
+					
+	function addEventForAdvise(){
+	   $('#adviseBtn').click(function(){
+	      var _src=$(this).attr('src');
+	      if(_src=='./leftAdvise/hide.png'){
+	      $(this).attr('src','./leftAdvise/expand.png').css('marginLeft','88px');
+	      $('#adviseBody').hide();
+	      }else{
+	       $(this).attr('src','./leftAdvise/hide.png').css('marginLeft','95px');
+	          $('#adviseBody').show();
+	      }
+	   });
+	   
+	   $('#adviseBody').click(function(){
+		    $.etaxAjax('DzswjAdviseAction.action',{'open_type':'package','code':'100209','app_client_id':''},function(data){
+				var a=$("<a href='"+data["url"]+"'  target='_blank'>链接</a>").get(0);
+	 		    var e;
+				if($.browser.msie){
+				  window.open(data["url"]);
+				}else{
+				 e=document.createEvent('MouseEvents');
+				 e.initEvent('click',true,true);
+				 a.dispatchEvent(e);
+				} 
+			},false);
+	   });
+	}
+	//modified by Jiangy 根据sb_type跳转到哪个url
+	function addTabs(_aTitle, url) {
+	debugger;
+	    var aTitle=$.trim(_aTitle);
+		if ($.trim(aTitle) == "纳税申报" || $.trim(aTitle) == "合并财务报表申报" ) {
+			debugger;
+			var sb_type = '1';
+			//添加分之 针对财务报表 如果未鉴定，修改提示：“财务报表未鉴定,请确认是否做过适用财务会计制度备案,如未备案,请先完成备案再申报!”
+			//var sbzl = '10101';
+			var sbzl = $("input[name = 'sb_zlbh']").val();
+			var nsqx_dm = $("input[name = 'nsqx_dm']").val();
+			var zsxm_dm = $("input[name = 'zsxm_dm']").val();
+			var skssqqTrue = window.$("#sssq_q").val();
+			var skssqzTrue = window.$("#sssq_z").val();
+			if (sb_type == "16" || sb_type == "26") {
+				var message = $("input[name = 'message']").val();
+				if(sbzl == null || sbzl == ""){
+					if(message == ""){
+						layerHandler.alertauto("您企业未按规定向税务机关报备财务、会计制度或者财务、会计处理办法和会计核算软件，请备案后报送财务会计报表。",'提示信息', '350','210', null);
+						return false;
+					}else{
+						layerHandler.alertauto(message,'提示信息', '280','170', null);
+						return false;
+					}
+				}
+				//商业银行，保险公司，证券公司，农民专业合作社 按季申报四季度开始不允许申报，只能允许申报往期，如果按月则最后一个月不允许申报
+				if(sbzl == "29802" || sbzl == "29803" || sbzl == "29804" || sbzl == "29808" || sbzl == "29807" || sbzl == "29810"
+				|| sbzl == "39802" || sbzl == "39803" || sbzl == "39804" || sbzl == "39808" || sbzl == "39807" || sbzl == "39810"){
+				   var showMess = "";
+				   if(sbzl == "29808" || sbzl == "39808"){
+				   		showMess = "农民专业合作社财务会计制度";
+				   }else if(sbzl == "29802" || sbzl == "39802"){
+				   		showMess = "企业会计准则（商业银行）";
+				   }else if(sbzl == "29804"  || sbzl == "39804"){
+				   		showMess = "企业会计准则（证券公司）";
+				   }else if(sbzl == "29803"  || sbzl == "39803"){
+				   		showMess = "企业会计准则（保险公司）";
+				   }else if(sbzl == "29807"  || sbzl == "39807"){
+				   		showMess = "企业会计准则（担保公司）";
+				   }else if(sbzl == "29810"  || sbzl == "39810"){
+				   		showMess = "民间非营利组织会计制度";
+				   }
+				  //2019年四季度或者最后一个月之后的该几类财务报表暂时不允许申报
+				  var nsqxDm = getNsqxdm(skssqqTrue,skssqzTrue);
+				  var flag_yd = compareDate(skssqqTrue,'2019-11-01');
+				  var flag_jd = compareDate(skssqqTrue,'2019-10-01');
+				  var flag_nd = compareDate(skssqqTrue,'2019-01-01');
+				  if((nsqxDm == "06" && flag_yd) || (nsqxDm == "08" && flag_jd)|| (nsqxDm == "10" && flag_nd)){
+				  	layerHandler.alertauto(showMess+"财务报表类型已过期，请前往大厅重新备案。",'提示信息', '320','190', null);
+						return false;
+				  }
+				}
+			}else if(sb_type == "6"){
+				var message = $("input[name = 'message']").val();
+				if(message != ""){
+					layerHandler.alertauto(message,'提示信息', '280','170', null);
+					return false;
+				}
+			}
+			//添加分之 针对财务报表 如果未鉴定，修改提示：“财务报表未鉴定,请确认是否做过适用财务会计制度备案,如未备案,请先完成备案再申报!”
+			//获取子页面属期
+			if (skssqqTrue == "" || skssqzTrue == "" || 
+						skssqqTrue == undefined || skssqzTrue == undefined) {
+				layerHandler.alertauto("您企业当前没有有效的税(费)种认定信息,请联系税务局进行税(费)种认定。", '提示信息',
+						'300', '160', null);
+				return false;
+			}
+
+			url = 'prevCommCheckAction.action?sb_zlbh='
+					+ sbzl
+					+ '&sb_type=1&zsxm_dm='+ zsxm_dm +'&nsqx_dm= '+ nsqx_dm +'&sssq_q='
+					+ skssqqTrue + '&sssq_z=' + skssqzTrue;
+			if (typeof window.zpwan === "function") {
+				var obj = $.trim(window.zpwan());
+				if (obj == "") {
+					layerHandler.alertauto("您企业没有有效的税种认定信息，不能够进行申报!", '提示信息',
+							'300', '160', null);
+					return;
+				}
+			}
+		}
+		var striframe = "";
+		if (aTitle == "主页") {
+			// striframe = "<div id='maincontainer_noiframe' name='mainIframe'  class='tabiframe' style=''><div>";
+            striframe = "<iframe id='maincontainer_noiframe' name='mainIframe'  class='tabiframe'  scrolling='auto' frameborder='0' src='main.html' style='width:100%;height:100%;'></iframe>";
+
+		} else {
+			striframe = "<iframe id='mainIframe' name='mainIframe'  class='tabiframe'  scrolling='auto' frameborder='0' src=";
+			striframe += "'" + url + "'";
+			striframe += "style='width:100%;height:100%;'></iframe>";
+		}
+
+		if ($("#mainPanle").tabs('exists', aTitle)) {
+			$("#mainPanle").tabs('select', aTitle);
+			var tab = $('#mainPanle').tabs('getSelected'); // get selected panel
+			$('#mainPanle').tabs('update', {
+				tab : tab,
+				options : {
+					title : aTitle,
+					content : striframe
+				}
+			});
+
+		} else {
+			if (aTitle == "主页") {
+				$('#mainPanle').tabs('add', {
+					title : aTitle,
+					content : striframe,
+					closable : false,
+					cache : true
+				});
+				$("#maincontainer_noiframe").load("main.html");
+			} else {
+				$('#mainPanle').tabs('add', {
+					title : aTitle,
+					content : striframe,
+					closable : true,
+					cache : true
+				});
+			}
+
+			var imageMenuData = [ [ {
+				text : "关闭",
+				func : function() {
+					$(this).find(".tabs-close").trigger("click");
+				}
+			}, {
+				text : "关闭其他",
+				func : function() {
+					$(this).siblings().find(".tabs-close").trigger("click");
+					$(this).trigger("click");
+				}
+			}, {
+				text : "关闭所有",
+				func : function() {
+					$(this).siblings().find(".tabs-close").trigger("click");
+					$(this).find(".tabs-close").trigger("click");
+				}
+			} ] ];
+			$("#mainPanle ul.tabs li").each(function() {
+				if ($(this).find(".tabs-close").length > 0) {
+					$(this).smartMenu(imageMenuData, {
+						name : "tabMenu"
+					});
+				}
+			});
+
+		}
+		;
+		resizewidth();
+		$("#right_button").trigger("click");
+
+	}
+	function selectAtitle(title) {
+		$("#tree_menu ul.ltree li a").each(
+				function() {
+					if ($(this).text() == title) {
+						$("#tree_menu").accordion('select',
+								$(this).parents(".panel").index() - 1);
+						$(".easyui-accordion li a").removeClass('selected');
+						$(this).addClass('selected');
+					}
+					;
+					if (title == "主页") {
+						$("#tree_menu").accordion('select', 0);
+						$(".easyui-accordion li a").removeClass('selected');
+					}
+				});
+
+	}
+
+	function reflash() {
+		$("#tree_menu ul.ltree:eq(0) li a:eq(0)").trigger("click");
+	}
+	function f_menu_initial(jsonData) {
+		var menus = jsonData.menus;
+		var _menus_str = "";
+		for ( var i = 0; i < menus.length; i++) {
+			_menus_str += _accordion_add(menus[i]);
+		}
+		$("#tree_menu").addClass("easyui-accordion");
+		$.parser.parse($('#tree_menu').parent());
+
+		function _accordion_add(menu) {
+			var _title = menu["title"];
+			var icon = menu["icon"];
+			var url = menu["url"];
+
+			var child_menus = null;
+			if (menu["menus"]) {
+				child_menus = menu["menus"];
+
+				var _li = "";
+				for ( var i = 0; i < child_menus.length; i++) {
+					_li += "<li><a href='javascript:void(0);'  src="
+							+ child_menus[i]["url"] + ">"
+							+ child_menus[i]["title"] + "</a></li>";
+				}
+
+				var _str = "<div title='" + _title + "' data-options=iconCls:'"+icon+"'>";
+				_str += "<ul class='ltree'>";
+				_str += _li;
+				_str += "</ul>";
+				_str += "</div>";
+				return _str;
+			} else {
+				var _str = "<div  title='" + _title +"'>";
+				_str += "<a>asdfadsf;";
+				_str += "</a></div>";
+				return _str;
+			}
+
+		}
+		;
+	};
+
+	function szyx() {
+		$.ajax({
+			type : 'post',
+			url : 'indexMenuJump.action?sign=queryszyx',
+			cache : false,
+			dataType : 'json',
+			success : function(result) {
+				if (result.SbYxFalg != '0000') {
+					$.messager.alert('提示信息', "该税种未核定", 'info');
+					return;
+				}
+			},
+			error : function(result) {
+				$.messager.alert('提示信息', "该税种未核定", 'error');
+				return;
+			}
+		});
+	}
+	function checkCwbbSssq(ssqq_date, ssqz_date) {
+		if (ssqq_date.substring(8) != "01") {
+			alert("所属时期起应为当月第一天！");
+			return false;
+		}
+		var month = ssqz_date.substring(5, 7);
+		var day = ssqz_date.substring(8);
+		if (month == "02") {
+			if (day != "28" || day != "29") {
+				alert("所属时期止应为当月最后一天！");
+				return false;
+			}
+		}
+		if (month == "01" || month == "03" || month == "05" || month == "07"
+				|| month == "08" || month == "10" || month == "12") {
+			if (day != "31") {
+				alert("所属时期止应为当月最后一天！");
+				return false;
+			}
+		}
+		if (month == "04" || month == "06" || month == "09" || month == "11") {
+			if (day != "30") {
+				alert("所属时期止应为当月最后一天！");
+				return false;
+			}
+		}
+		var date_ssqz = new Date(ssqz_date);
+		var date_ssqq = new Date(ssqq_date);
+		if (date_ssqz <= date_ssqq) {
+			alert("所属时期起应小于所属时期止！");
+			return false;
+		}
+		return true;
+	}
+</script>
+</head><body class="easyui-layout layout panel-noscroll"><div style="position: absolute; z-index: 19700; top: -1970px; left: -1970px; display: none;"><iframe src="My97DatePicker.html" frameborder="0" border="0" scrolling="no" style="width: 186px; height: 199px;"></iframe></div>
+	<div class="panel layout-panel layout-panel-west" style="left: 0px; top: 0px; width: 180px;"><div id="left" data-options="region:&#39;west&#39;,border:false" title="" class="panel-body panel-body-noheader panel-body-noborder layout-body" style="width: 180px; height: 796px;">
+		<div id="tree_menu" fit="false" border="false" class="easyui-accordion accordion accordion-noborder">
+			
+				
+					<div class="panel" style="width: 180px;"><div class="panel-header accordion-header accordion-header-selected" style="height: 30px; width: 180px;"><div class="panel-title panel-with-icon">申报缴纳</div><div class="panel-icon icon-sb-1"></div><div class="panel-tool"><a class="panel-tool-collapse" href="javascript:void(0)" style="display: none;"></a><a href="javascript:void(0)" class="accordion-collapse"></a></div></div><div title="" data-options="iconCls:&#39;icon-sb-1&#39;" class="panel-body accordion-body" style="display: block; width: 180px; height: auto;">
+						<ul class="ltree">
+							
+								
+									<li><a href="javascript:void(0);" src="indexMenuJump.action?sign=querysbzl&amp;sb_type=1&amp;zsxm_dm=10101&amp;sbqx_bm=null" class="">纳税申报 </a></li>
+								
+							
+								
+									<li><a href="javascript:void(0);" src="sbcxAction.html" class="selected">涉税查询 </a></li>
+								
+							
+								
+									<li><a href="javascript:void(0);" src="wspzdyAction.action?sign=index&amp;sb_type=1&amp;zsxm_dm=10101&amp;sbqx_bm=null">完税凭证 </a></li>
+							
+								
+							
+						</ul>
+					</div></div>
+			
+				
+					<div class="panel" style="width: 180px;"><div class="panel-header accordion-header" style="height: 30px; width: 180px;"><div class="panel-title panel-with-icon">通用功能</div><div class="panel-icon icon-sb-4"></div><div class="panel-tool"><a class="panel-tool-collapse panel-tool-expand" href="javascript:void(0)" style="display: block;"></a><a href="javascript:void(0)" class="accordion-collapse accordion-expand"></a></div></div><div title="" data-options="iconCls:&#39;icon-sb-4&#39;" class="panel-body accordion-body" style="display: block; width: 180px; height: auto;">
+						<ul class="ltree">
+								
+									<li><a href="javascript:void(0);" src="">出口报表导入 </a></li>
+								
+							
+								
+									<li><a href="javascript:void(0);" src="ncpFpcjAction.action?sign=queryNcpAll&amp;sb_type=1&amp;zsxm_dm=10101&amp;sbqx_bm=null">农产品发票采集 </a></li>
+								
+							
+								
+									<li><a href="javascript:void(0);" src="hgjhmxcxAction.action?sign=initHgjhmx&amp;sb_type=1&amp;zsxm_dm=10101&amp;sbqx_bm=null">海关稽核明细查询 </a></li>
+								
+							
+								
+									<li><a href="javascript:void(0);" src="zzsdkmxcxAction?sign=initZzsdkmx&amp;sb_type=1&amp;zsxm_dm=10101&amp;sbqx_bm=null">增值税抵扣明细查询 </a></li>
+								
+							
+						</ul>
+					</div></div>
+				
+			
+				
+			
+				
+			
+				
+			
+				
+			
+		</div><!--
+		<div style="position:fixed;left:30px;top:250px;display:none;" id="leftFww">
+			<div style="width: 120px;cursor: pointer;">
+			 <img src="./leftAdvise/hide.png" style="margin-left: 95px;" id="adviseBtn"/>
+			 </div>
+			 <div style="width:120px;height: 280px;cursor: pointer;" id="adviseBody">
+			 <img src="./leftAdvise/left_advise.gif" />
+			 </div>
+		</div>
+	--></div>
+
+	</div>
+
+	<div class="panel layout-panel layout-panel-center panel-noscroll" style="left: 180px; top: 0px; width: 1740px;">
+		<div id="mainPanle" region="center" overflow-y="hidden" border="false" title="" class="panel-body panel-body-noheader panel-body-noborder layout-body tabs-container" style="width: 1740px; height: 796px;">
+	<!--<div class="tabs-header tabs-header-noborder" style="width: 1740px;"><div class="tabs-scroller-left" style="display: block;"></div><div class="tabs-scroller-right" style="display: none;"></div>-->
+		<!--<div class="tabs-wrap" style="margin-left: 0px; margin-right: 0px; width: 1740px;">-->
+			<!--<ul class="tabs" style="height: 26px;">-->
+				<!--<li class="">-->
+					<!--<a href="javascript:void(0)" class="tabs-inner" style="height: 25px; line-height: 25px;">-->
+						<!--<span class="tabs-title">主页1</span><span class="tabs-icon"></span></a>-->
+				<!--</li>-->
+				<!--<li class=""><a href="javascript:void(0)" class="tabs-inner" style="height: 25px; line-height: 25px;">-->
+					<!--<span class="tabs-title tabs-closable">纳税申报</span><span class="tabs-icon"></span></a><a href="javascript:void(0)" class="tabs-close"></a>-->
+				<!--</li>-->
+				<!--<li class="tabs-selected"><a href="javascript:void(0)" class="tabs-inner" style="height: 25px; line-height: 25px;"><span class="tabs-title tabs-closable">涉税查询</span><span class="tabs-icon"></span></a><a href="javascript:void(0)" class="tabs-close"></a>-->
+				<!--</li>-->
+			<!--</ul>-->
+		<!--</div>-->
+	<!--</div>-->
+			<div class="tabs-panels tabs-panels-noborder" style="height: 766px; width: 1740px;"><div class="panel" style="display: none; width: 1740px;">
+				<div title="" class="panel-body panel-body-noheader panel-body-noborder" style="width: 1740px; height: 766px;">
+					<div id="maincontainer_noiframe" name="mainIframe" class="tabiframe" style="">
+
+
+
+
+
+	<div class="mainbox">
+		<div class="inafter" style="">
+		<div><span id="xmmJzzybnsrMess" style="color:red;font-size:14px;font-family:宋体;font-style:inherit"></span></div>
+			<div class="second">
+				<div class="processbox zengzhi">
+					<div class="title ">
+						<span class="binfo"> <span> 税款所属期： <input type="text" id="sssq_q" onfocus="WdatePicker()" onchange="changessqq()" style="border:1px solid green" value="2020-06-01" readonly="readonly" disabled="disabled"> 至 <input type="text" id="sssq_z" onfocus="WdatePicker()" disabled="disabled" onchange="changessqz()" style="border:1px solid green" value="2020-06-30" readonly="readonly"> </span><input type="button" id="qysdsABtn" value="&gt;&gt;所得税年度A申报" style="background: rgb(25, 111, 169);color: white;font-weight:border;margin-left: 30px;padding:5px 10px 5px 10px;cursor: pointer;display: none;"> 
+							<input type="button" id="glywBtn" value="&gt;&gt;关联业务往来申报" style="background: rgb(25, 111, 169);color: white;font-weight:border;margin-left: 30px;padding:5px 10px 5px 10px;cursor: pointer;display: none;">
+							<span class="ente_home" id="ente_home">进入申报 </span>
+							
+									<span style="border:1px;color:red;font-size:15px;">完成该税种申报后,可自动跳转至附加税申报.</span>
+								 
+							<br> 
+									
+						</span> 
+						<span><input type="hidden" id="nsqx_dm" value="06"> </span>
+					</div>
+					<div class="state_sb">
+						<!--增值税一般纳税人申报状态：
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+					-->
+					增值税一般纳税人申报 状态：
+					</div>
+					<div class="process">
+						<ul>
+							<li class="state1" style="display: none;">
+								<div class="flag">
+									<img src="images/flag.png" alt="">
+								</div> <span class="p1">未填表</span> <span class="p2">未提交</span> <span class="p3">未受理</span> <span class="p4">未申报</span> <span class="p5">未完税</span></li>
+							<li class="state2" style="display: none;">
+								<div class="flag">
+									<img src="images/flag.png" alt="">
+								</div> <span class="p1">草稿</span> <span class="p2">未提交</span> <span class="p3">未受理</span> <span class="p4">未申报</span> <span class="p5">未完税</span></li>
+							<li class="state3" style="display: none;">
+								<div class="flag">
+									<img src="images/flag.png" alt="">
+								</div> <span class="p1">已填表</span> <span class="p2">未提交</span> <span class="p3">未受理</span> <span class="p4">未申报</span> <span class="p5">未完税</span></li>
+							<li class="state4" style="display: none;">
+								<div class="flag">
+									<img src="images/flag.png" alt="">
+								</div> <span class="p1">已填表</span> <span class="p2">已提交</span> <span class="p3">未受理</span> <span class="p4">未申报</span> <span class="p5">未完税</span></li>
+							<li class="state5" style="display: none;">
+								<div class="flag">
+									<img src="images/flag.png" alt="">
+								</div> <span class="p1">已填表</span> <span class="p2">已提交</span> <span class="p3">已受理</span> <span class="p4">未申报</span> <span class="p5">未完税</span></li>
+							<li class="state6" style="display: none;">
+								<div class="flag">
+									<img src="images/flag.png" alt="">
+								</div> <span class="p1">已填表</span> <span class="p2">已提交</span> <span class="p3">已受理</span> <span class="p4">申报失败</span> <span class="p5">未完税</span></li>
+							<li class="state7" style="display: none;">
+								<div class="flag">
+									<img src="images/flag.png" alt="">
+								</div> <span class="p1">已填表</span> <span class="p2">已提交</span> <span class="p3">已受理</span> <span class="p4">已申报</span> <span class="p5">未完税</span></li>
+							<li class="state8" style="display: none;">
+								<div class="flag">
+									<img src="images/flag.png" alt="">
+								</div> <span class="p1">已填表</span> <span class="p2">已提交</span> <span class="p3">已受理</span> <span class="p4">已申报</span> <span class="p5">扣款失败</span></li>
+							<li class="state9" style="display: list-item;">
+								<div class="flag">
+									<img src="images/flag.png" alt="">
+								</div> <span class="p1">已填表</span> <span class="p2">已提交</span> <span class="p3">已受理</span> <span class="p4">已申报</span> <span class="p5">已完税</span></li>
+						</ul>
+					</div>
+					<div class="money" style="text-align:left">
+						<span id="ynse"></span>
+					</div>
+				</div>
+			</div>
+			<div class="Calendar">
+				<table cellspacing="0">
+					<thead>
+						<tr>
+							<td style="color:#e84c3d;position:relative"><a class="sunday"></a>星期日</td>
+							<td>星期一</td>
+							<td>星期二</td>
+							<td>星期三</td>
+							<td>星期四</td>
+							<td>星期五</td>
+							<td style="color:#e84c3d;position:relative"><a class="satuday"></a>星期六</td>
+						</tr>
+					</thead>
+					<tbody id="idCalendar"><tr><td><em>&nbsp;</em></td><td><em>&nbsp;</em></td><td><em>&nbsp;</em></td><td><em><a id="day1" class="thisday">1</a></em></td><td><em><a id="day2" class="thisday">2</a></em></td><td><em><a id="day3" class="thisday">3</a></em></td><td><em><a id="day4" class="thisday">4</a></em></td></tr><tr><td><em><a id="day5" class="thisday">5</a></em></td><td><em><a id="day6" class="thisday">6</a></em></td><td><em><a id="day7" class="thisday">7</a></em></td><td><em><a id="day8" class="thisday">8</a></em></td><td><em><a id="day9" class="thisday">9</a></em></td><td><em><a id="day10" class="thisday">10</a></em></td><td><em><a id="day11" class="thisday">11</a></em></td></tr><tr><td><em><a id="day12" class="thisday">12</a></em></td><td><em><a id="day13" class="thisday">13</a></em></td><td><em><a id="day14" class="thisday">14</a></em></td><td><em><a id="day15" class="thisday">15</a></em></td><td><em>16</em></td><td><em>17</em></td><td><em>18</em></td></tr><tr><td><em>19</em></td><td><em class="onToday">20</em></td><td><em>21</em></td><td><em>22</em></td><td><em>23</em></td><td><em>24</em></td><td><em>25</em></td></tr><tr><td><em>26</em></td><td><em>27</em></td><td><em>28</em></td><td><em>29</em></td><td><em>30</em></td><td><em>31</em></td><td><em>&nbsp;</em></td></tr></tbody>
+				</table>
+				<div class="Calendar_top" style="min-height: 344px; height: 345px;">
+					<div style="height:40px;text-align:center;margin-top:20px;margin-right:30px;">
+
+						<div class="Calendar_input Calendar_update">
+							<span class="Calendar_year"><span id="idCalendarYear">2020</span> 年
+							</span> <span class="Calendar_month"><span id="idCalendarMonth">7</span> 月</span>
+							<span class="Calendar_date"><span id="idCalendarDate">20</span> 日</span>
+						</div>
+
+						<div style="clear:both"></div>
+					</div>
+					<div id="sbqxDiv" style="text-align:left;margin-top:40px;margin-left:40px;font-size:18px;">
+						<span class="point"> <img src="images/point.png" width="8" height="8"> </span> 申报期限 <i id="sbqxq">2020-07-01 </i>至<i id="sbqxz"> 2020-07-15 </i>
+					</div>
+
+					<div style="text-align:left;margin-top:40px;margin-left:40px;font-size:18px;" class="sb_distance">
+						<span class="point" id="point"> <img src="images/point.png" width="8" height="8"> </span> <span class="distance" id="distance">申报期已结束</span>
+					</div>
+					<div style="text-align:left;margin:40px 5px 0 40px;font-size:18px;">
+						<span class="point"> <img src="images/point.png" width="8" height="8"> </span> 友情提醒 ：<font style="font-size:16px;color:#fff102">此处只显示在本系统申报状态，可在一户式查询中查询其他所有系统申报信息！</font>
+					</div>
+				</div>
+				<div style="clear:both"></div>
+			</div>
+
+			<input type="hidden" value="2020-07-15" id="sbqx">
+		</div>
+	</div>
+
+
+
+</div></div></div>
+
+		<div class="panel" style="display: none; width: 1740px;"><div title="" class="panel-body panel-body-noheader panel-body-noborder" style="width: 1740px; height: 766px;">
+<iframe id="mainIframe1" name="mainIframe" class="tabiframe" scrolling="auto" frameborder="0" src="prevCommCheckAction.html" style="width:100%;height:100%;">测试</iframe></div></div>
+		<div class="panel" style="display: block; width: 1740px;"><div title="" class="panel-body panel-body-noheader panel-body-noborder" style="width: 1740px; height: 766px;">
+<iframe id="mainIframe" name="mainIframe" class="tabiframe" scrolling="auto" frameborder="0" src="sbcxAction.html" style="width:100%;height:100%;">测试</iframe></div></div></div></div></div>
+	<div>
+		<input type="hidden" name="nsqx_dm" value="06">
+		<input type="hidden" name="zsxm_dm" value="10101">
+
+		<input type="hidden" name="sb_zlbh" value="10101">
+		<input type="hidden" name="message" value="">
+		<input type="hidden" name="whsyjsfJsonStr" value="">
+		<input type="hidden" id="bbListData" name="bbListData">
+		<input type="hidden" id="glywData" name="glywData">
+	</div>
+	
+
+
+<!-- YQQ loading css_begin-->
+<style type="text/css">
+.mask{
+  position:absolute;
+  top:0px;
+  filter:alpha(opacity=60);
+  background: #777;
+  z-index:1002;
+  left:0px;
+  opacity:0.5;
+  -moz-opacity:0.5;
+  }
+.model{
+  position:absolute;
+   z-index:1002;
+   width:50px;
+   height:50px;
+   text-align:center;
+   background-color: #777;
+   display:none;
+  }
+  .fail_detialcontent{margin-left:20px;}
+  .fail_detial{padding:10px 0;clear:both;color:#448aca}
+</style>
+<script type="text/javascript">
+var iosOverlayObj;
+function loading(){
+	var opts = {
+		lines: 13, // The number of lines to draw
+		length: 11, // The length of each line
+		width: 5, // The line thickness
+		radius: 17, // The radius of the inner circle
+		corners: 1, // Corner roundness (0..1)
+		rotate: 0, // The rotation offset
+		color: '#FFF', // #rgb or #rrggbb
+		speed: 1, // Rounds per second
+		trail: 60, // Afterglow percentage
+		shadow: false, // Whether to render a shadow
+		hwaccel: false, // Whether to use hardware acceleration
+		className: 'spinnerr', // The CSS class to assign to the spinner
+		zIndex: 2e9, // The z-index (defaults to 2000000000)
+		top: 'auto', // Top position relative to parent in px
+		left: 'auto' // Left position relative to parent in px
+	};
+	showMask('loadMask');
+	var target = document.createElement("div");
+	document.body.appendChild(target);
+	var spinner = new Spinner(opts).spin(target);
+	iosOverlayObj = iosOverlay({
+		text: "",
+		duration: 100,
+		spinner: spinner,
+		icon:null
+	});
+	return false;
+}
+function hide(){
+	iosOverlayObj.hide();
+	$("#loadMask").hide();
+}
+function showMask(maskId){
+	$("#"+maskId).css('height',$(document).height());
+	$("#"+maskId).css('width',$(document).width());
+	$("#"+maskId).show();
+}
+//loading();
+</script>
+
+<!-- YQQ div loading_begin -->
+<div id="loadMask" class="mask"></div>
+<div id="loadDiv" class="model"></div>
+<!-- YQQ div loading_end -->
+
+
+<div class="layout-split-proxy-h"></div><div class="layout-split-proxy-v"></div></body></html>
